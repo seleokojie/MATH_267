@@ -1,14 +1,11 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb, amsthm, amsfonts, textcomp}
-\DeclareMathSymbol{\minus}{\mathbin}{AMSa}{"39}
+\usepackage{267_Lib}
 
 \title{MATH 267 - Homework 2}
 \author{Sele Okojie}
 \date{February 13, 2023}
 
 \begin{document}
-
     \maketitle
 
     \begin{enumerate}
@@ -156,6 +153,7 @@
 \textbf{Bonus Questions:}
 
 \begin{itemize}
+
         %---------------Question B1---------------%
 	\item [(B1)] Prove that, for all positive integers $a$ and $b$, if $a \ |\ b$ and $b \ |\ a$, then $a = b$.
             \begin{proof}
@@ -173,8 +171,6 @@
                 Suppose $\sqrt{3}$ is rational. Then, by the Well-Ordering Property, let $a$ be the smallest positive integer whose product with $\sqrt{3}$ is an integer. We want a smaller positive integer that, when multiplied with $\sqrt{3}$ results in an integer. To get a smaller integer, we must multiply by some integer less than $1$. To get a positive integer, we must multiply by something positive. To get an integer, we must multiply by $(\sqrt{3} + b)$, where $b\in \mathbb{Z}$. Thus, the only integer k that makes $0 < \sqrt{3} + b < 1$ is $\minus 1$, since $1 < \sqrt{3} < 2$.\\\\
                 Therefore, let $c = (\sqrt{3} - 1)\cdot a$. Then, $c$ is a smaller positive integer whose product with $\sqrt{3}$ is an integer. However, we assumed $a$ was the smallest positive integer whose product with $\sqrt{3}$ is an integer. This is a contradiction. Thus, we reject our previous assumptions and say that $\sqrt{3}$ is irrational. 
             \end{proof}
-
-        
-\end{itemize}
+    \end{itemize}
 
 \end{document}

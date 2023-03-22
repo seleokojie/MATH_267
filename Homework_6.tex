@@ -11,98 +11,98 @@
     \begin{enumerate}
     
             %---------------Question 1---------------%
-    	\item Let $A = \{ 1, 2, 3 \}$.  For each set below, determine if it is a partial order, an equivalence relation, both, or neither.
-    		\begin{align*}
-    			R = & \ \{ (1, 1), (2, 2), (3, 3) \} \\
-    			S = & \ \{ (1, 1), (1, 2), (2, 2), (2, 3), (3, 3) \} \\
-    			T = & \ \{ (1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3) \} \\
-    			U = & \ A \times A
-    		\end{align*}
+        \item Let $A = \{ 1, 2, 3 \}$.  For each set below, determine if it is a partial order, an equivalence relation, both, or neither.
+    	\begin{align*}
+    		R = & \ \{ (1, 1), (2, 2), (3, 3) \} \\
+    		S = & \ \{ (1, 1), (1, 2), (2, 2), (2, 3), (3, 3) \} \\
+    		T = & \ \{ (1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3) \} \\
+    		U = & \ A \times A
+    	\end{align*}
 
-                \begin{itemize}
-                    \item $R$ is both a partial order and an equivalence relation.
-                    \item $S$ is neither a partial order ($1 S 2$ and $2 S 3$, but $1 \cancel{S} 3$) nor an equivalence relation ($1 S 2$ but $2 \cancel{S} 1$).
-                    \item $T$ is a partial order but not an equivalence relation ($1 T 2$, but $2 \cancel{T} 1$).
-                    \item $U$ is not a partial order ($1 U 2$ and $2 U 1$, but $1 \neq 2$) but is an equivalence relation.
-                \end{itemize}
-            %---------------Question 2---------------%
-    	\item Prove that, if $A \subseteq \mathbb{R}$, then $A$ has at most one minimal element.
-                \begin{proof}
-                    Fix arbitrary $A \subseteq R$. Then, suppose $a$ and $b$ are two arbitrary minimums of A. Therefore, $a$ and $b$ are both lower bounds of $A$ and $a \in A$ and $b \in B$. Then, since $a \in A$ and $b$ is a lower bound of $A$, $b \le a$. Similarly, since $b \in A$ and $a$ is a lower bound of A, $a \le b$. Finally, since \lQuote$\le$" is anti-symmetric, $a = b$. 
-                \end{proof}
-
-            %---------------Question 3---------------%
-    	\item Prove that, if $A \subseteq \mathbb{R}$, then $A$ has at most one infimum.
-                \begin{proof}
-                    Let $\mathcal{U} = \{ c \in \mathbb{R} : c \text{ is an lower bound of }A \}$. An infimum of $A$ is a maximum of $\mathcal{U}$. However, since $A \subseteq \mathbb{R}$, then $\mathcal{U}$ has at most one minimum element by Question 2. Therefore, $A$ has at most one infimum. 
-                \end{proof}
-
-            %---------------Question 4---------------%
-    	\item Find an example of $A \subseteq \mathbb{R}$ such that $\sup(A) = \inf(A)$. \par
-                \quad Let $A = \{ 1 \}$. Then, $\sup(A) = \inf(A) = 1$.
-
-            %---------------Question 5---------------%
-    	\item Prove that, for all $A \subseteq \mathbb{R}$, $A$ is bounded if and only if there exists some $b \in \mathbb{R}$ such that, for all $a \in A$, $|a| \leq b$.
-                \begin{proof}
-                    Fix arbitrary $A \subseteq R$. We will show that this statement works both directions, that is:
-                    \begin{caseof}
-                        \case{($\impliedby$)}{
-                            Let $b \in \mathbb{R}$ and assume that $|a| \leq b$ for all $a \in A$. Then, from the definition of absolute value,
-                            \begin{align*}
-                                \minus b \le a \le b.
-                            \end{align*}
-                            Thus, $A$ has a upper bound ($b$) and a lower bound ($\minus b$). Following this, $A$ is bounded above and bounded below. Therefore, $A$ is said to be bounded.
-                        }\case{($\implies$)}{
-                            Assume that $A$ is bounded. Then, $A$ is bounded above and bounded below. Therefore, there exists some $c_1, c_2$ such that $c_1 \le a \le c_2$, for all $a \in A$. Then, let $b = \text{max}(|c_1|, |c_2|) \in\mathbb{R}$, that is: 
-                            \begin{alignat*}{2}
-                                \minus b \le c_1 \le \ &a \le c_2 \le b \qquad &\text{that is, } \\
-                                |a| &\le b.
-                            \end{alignat*}
-                        }
-                    \end{caseof}
-                    Since we proved both directions of the statement, it must hold true.
-                \end{proof}
-
-            %---------------Question 6---------------%
-    	\item Compute the maximum, minimum, supremum, and infimum of each of the following subsets of $\mathbb{R}$:
-    		\begin{align*}
-    			A = & \ \{ 1, 2, 3 \} & B = & \ (1, 2) \cup \{ 3 \} \\
-    			C = & \ \left\{ \frac{1}{n} : n \in \mathbb{Z}, n > 0 \right\} & D = & \ \mathbb{Z}
-    		\end{align*}
-
-                \begin{itemize}
-                    \item max($A$) = 3, min($A$) = 1, sup($A$) = 3, inf($A$) = 1.
-                    \item max($B$) = 3, min($B$) = DNE, sup($B$) = 3, inf($B$) = 1.
-                    \item max($C$) = 1, min($C$) = DNE, sup($C$) = 1, inf($C$) = 0.
-                    \item max($D$) = DNE, min($D$) = DNE, sup($D$) = DNE, inf($D$) = DNE. 
-                \end{itemize}
-
-            %---------------Question 7---------------%
-    	\item Prove that, for all real numbers $a$, there exists an integer $n$ such that $n < a$. \par
-                \begin{proof}
-                    Fix an arbitrary $a \in \mathbb{R}$. By a corollary of the Archimedean Principle, for some $a, b \in \mathbb{R} > 0$, there exists a positive $n$ such that $b \le n\cdot a$. Using this corollary, let $b = 1$. Then, $1 \le n \cdot a$. Since $n$ is a positive integer, we have $n \ge 1$. Hence,
-                    \begin{alignat*}{2}
-                        1 &< n \cdot a, \\
-                        \frac{1}{n} &< a.
-                    \end{alignat*}
-                    Therefore, there exists an integer $n$ such that $n < a$ since we can always find an integer greater than or equal to $\frac{1}{n}$ that is less than $a$. 
-                \end{proof}
-                
-            %---------------Question 8---------------%
-    	\item Find a rational number $q$ such that $\pi < q < \frac{22}{7}$. \par\quad
-                Let $q$ be the average of $\pi$ and $\frac{22}{7}$, that is, $q = (\pi + \frac{22}{7}) / 2$. Then, since we intuitively know the average of two numbers lies between the two numbers, $\pi < q < \frac{22}{7}$.\par\quad
-                
-                To prove that $q$ is rational, we can simplify the expression for $q$ using the fact that $\pi$ is irrational, that is:
-                \begin{align*}
-                    q &= (\pi + \frac{22}{7}) / 2 \\
-                    &= (\frac{22}{7} + \pi) / 2 \\
-                    &= (\frac{44}{14} + \frac{22}{7}) / 2 \\
-                    &= (\frac{88}{14} + \frac{22}{7}) / 2 \\
-                    &= (\frac{110}{14}) / 2 \\
-                    &= \frac{55}{7}.
-                \end{align*}
-                Therefore, $q = \frac{55}{7}$ is a rational number that satisfies the inequality $\pi < q < \frac{22}{7}$.
+            \begin{itemize}
+                \item $R$ is both a partial order and an equivalence relation.
+                 \item $S$ is neither a partial order ($1 S 2$ and $2 S 3$, but $1 \cancel{S} 3$) nor an equivalence relation ($1 S 2$ but $2 \cancel{S} 1$).
+                \item $T$ is a partial order but not an equivalence relation ($1 T 2$, but $2 \cancel{T} 1$).
+                \item $U$ is not a partial order ($1 U 2$ and $2 U 1$, but $1 \neq 2$) but is an equivalence relation.
+            \end{itemize}
             
+         %---------------Question 2---------------%
+        \item Prove that, if $A \subseteq \mathbb{R}$, then $A$ has at most one minimal element.
+            \begin{proof}
+                Fix arbitrary $A \subseteq R$. Then, suppose $a$ and $b$ are two arbitrary minimums of A. Therefore, $a$ and $b$ are both lower bounds of $A$ and $a \in A$ and $b \in B$. Then, since $a \in A$ and $b$ is a lower bound of $A$, $b \le a$. Similarly, since $b \in A$ and $a$ is a lower bound of A, $a \le b$. Finally, since \lQuote$\le$" is anti-symmetric, $a = b$. 
+            \end{proof}
+
+        %---------------Question 3---------------%
+        \item Prove that, if $A \subseteq \mathbb{R}$, then $A$ has at most one infimum.
+            \begin{proof}
+                Let $\mathcal{U} = \{ c \in \mathbb{R} : c \text{ is an lower bound of }A \}$. An infimum of $A$ is a maximum of $\mathcal{U}$. However, since $A \subseteq \mathbb{R}$, then $\mathcal{U}$ has at most one minimum element by Question 2. Therefore, $A$ has at most one infimum. 
+            \end{proof}
+
+        %---------------Question 4---------------%
+        \item Find an example of $A \subseteq \mathbb{R}$ such that $\sup(A) = \inf(A)$. \par
+            \quad Let $A = \{ 1 \}$. Then, $\sup(A) = \inf(A) = 1$.
+
+        %---------------Question 5---------------%
+        \item Prove that, for all $A \subseteq \mathbb{R}$, $A$ is bounded if and only if there exists some $b \in \mathbb{R}$ such that, for all $a \in A$, $|a| \leq b$.
+            \begin{proof}
+                Fix arbitrary $A \subseteq R$. We will show that this statement works both directions, that is:
+                \begin{caseof}
+                    \case{($\impliedby$)}{
+                        Let $b \in \mathbb{R}$ and assume that $|a| \leq b$ for all $a \in A$. Then, from the definition of absolute value,
+                        \begin{align*}
+                            \minus b \le a \le b.
+                        \end{align*}
+                        Thus, $A$ has a upper bound ($b$) and a lower bound ($\minus b$). Following this, $A$ is bounded above and bounded below. Therefore, $A$ is said to be bounded.
+                    }\case{($\implies$)}{
+                        Assume that $A$ is bounded. Then, $A$ is bounded above and bounded below. Therefore, there exists some $c_1, c_2$ such that $c_1 \le a \le c_2$, for all $a \in A$. Then, let $b = \text{max}(|c_1|, |c_2|) \in\mathbb{R}$, that is: 
+                        \begin{alignat*}{2}
+                            \minus b \le c_1 \le \ &a \le c_2 \le b \qquad &\text{that is, } \\
+                            |a| &\le b.
+                        \end{alignat*}
+                    }
+                \end{caseof}
+                Since we proved both directions of the statement, it must hold true.
+            \end{proof}
+
+        %---------------Question 6---------------%
+        \item Compute the maximum, minimum, supremum, and infimum of each of the following subsets of $\mathbb{R}$:
+    	\begin{align*}
+    		A = & \ \{ 1, 2, 3 \} & B = & \ (1, 2) \cup \{ 3 \} \\
+    		C = & \ \left\{ \frac{1}{n} : n \in \mathbb{Z}, n > 0 \right\} & D = & \ \mathbb{Z}
+    	\end{align*}
+
+            \begin{itemize}
+                \item max($A$) = 3, min($A$) = 1, sup($A$) = 3, inf($A$) = 1.
+                \item max($B$) = 3, min($B$) = DNE, sup($B$) = 3, inf($B$) = 1.
+                \item max($C$) = 1, min($C$) = DNE, sup($C$) = 1, inf($C$) = 0.
+                \item max($D$) = DNE, min($D$) = DNE, sup($D$) = DNE, inf($D$) = DNE. 
+            \end{itemize}
+
+        %---------------Question 7---------------%
+        \item Prove that, for all real numbers $a$, there exists an integer $n$ such that $n < a$. \par
+            \begin{proof}
+                Fix an arbitrary $a \in \mathbb{R}$. By a corollary of the Archimedean Principle, for some $a, b \in \mathbb{R} > 0$, there exists a positive $n$ such that $b \le n\cdot a$. Using this corollary, let $b = 1$. Then, $1 \le n \cdot a$. Since $n$ is a positive integer, we have $n \ge 1$. Hence,
+                \begin{alignat*}{2}
+                    1 &< n \cdot a, \\
+                    \frac{1}{n} &< a.
+                \end{alignat*}
+                Therefore, there exists an integer $n$ such that $n < a$ since we can always find an integer greater than or equal to $\frac{1}{n}$ that is less than $a$. 
+            \end{proof}
+                
+        %---------------Question 8---------------%
+        \item Find a rational number $q$ such that $\pi < q < \frac{22}{7}$. \par\quad
+            Let $q$ be the average of $\pi$ and $\frac{22}{7}$, that is, $q = (\pi + \frac{22}{7}) / 2$. Then, since we intuitively know the average of two numbers lies between the two numbers, $\pi < q < \frac{22}{7}$.\par\quad
+                
+            To prove that $q$ is rational, we can simplify the expression for $q$ using the fact that $\pi$ is irrational, that is:
+            \begin{align*}
+                q &= (\pi + \frac{22}{7}) / 2 \\
+                 &= (\frac{22}{7} + \pi) / 2 \\
+                &= (\frac{44}{14} + \frac{22}{7}) / 2 \\
+                &= (\frac{88}{14} + \frac{22}{7}) / 2 \\
+                 &= (\frac{110}{14}) / 2 \\
+                &= \frac{55}{7}.
+            \end{align*}
+            Therefore, $q = \frac{55}{7}$ is a rational number that satisfies the inequality $\pi < q < \frac{22}{7}$.
     \end{enumerate}
 
     \newpage

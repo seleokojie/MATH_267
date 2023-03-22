@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{267_Lib}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, amsfonts, textcomp, enumerate, cancel}
+\DeclareMathSymbol{\minus}{\mathbin}{AMSa}{"39}
+\newcommand{\lQuote}{``}
+
+%Defining The Case Function%
+\newcounter{casenum}
+\newenvironment{caseof}{\setcounter{casenum}{1}}{\vskip.5\baselineskip}
+\newcommand{\case}[2]{\vskip.5\baselineskip\par\noindent {\bfseries Case \arabic{casenum}:} #1\\#2\addtocounter{casenum}{1}}
+
+%Defining the subproof environment%
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}
+
+%Defining the subproof environment%
+\newenvironment{proofc}[1][Proof (By Contradiction).]{%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}

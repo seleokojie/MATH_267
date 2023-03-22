@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, amsfonts, textcomp, mathabx}
+\DeclareMathSymbol{\minus}{\mathbin}{AMSa}{"39}
+
+\title{MATH 267 - Homework 3}
+\author{Sele Okojie}
+\date{February 20, 2023}
+
+\begin{document}
+    \maketitle
+
+    \begin{enumerate}
+            %---------------Question 1---------------%
+    	\item Let $A = \{ 1, 2, 3, 4 \}$, $B = \{ 2, 4, 5 \}$, and $C = \{ 1, 5 \}$.  Compute each of the following:
+    		\begin{enumerate}
+
+                    %---------1a---------%
+    			\item $A \cap B = \{2, 4 \}$.
+
+                    %---------1b---------%
+    			\item $B \cup C = \{ 1, 2, 4, 5 \}$.
+
+                    %---------1c---------%
+    			\item $A \ \setminus \ C = \{ 2, 3, 4 \}$.
+
+                    %---------1d---------%
+    			\item $\mathcal{P}(C) = \{ \text{\O}, \{ 1 \}, \{ 5 \}, \{ 1, 5 \} \}$.
+    		\end{enumerate}
+
+            %---------------Question 2---------------%
+    	\item Consider Theorem 3.2.1 from the notes.
+    		\begin{enumerate}
+
+                    %---------2a---------%
+    			\item Prove (3): For all sets $A$, $A \cap A = A$.
+                        \begin{proof}
+                            Fix an arbitrary set $A$. Then, ``$A \cap A = A$" means:
+                            \begin{align*}
+                                \text{i. } &A \subseteq A \cap A \text{ and} \\
+                                \text{ii. } &A \cap A \subseteq A.
+                            \end{align*}
+                            
+                            \begin{enumerate}
+                                \item ``$A \subseteq A \cap A$" means ``For all $x \in A$, $x \in A \cap A$." Therefore, we fix an arbitrary $x \in A$. Then, $x \in A$ and $x \in A$. Thus, $x \in A \cap A$. \\
+                                \item ``$A \cap A \subseteq A$" means ``For all $x \in A \cap A$, $x \in A$." Therefore, we fix an arbitrary $x \in A \cap A$. Then, $x \in A$ and $x \in A$. Thus, $x \in A$.
+                            \end{enumerate}
+                        \end{proof}
+
+                    %---------2b---------%
+    			\item Prove (13): For all sets $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+                        \begin{proof}
+                            Fix arbitrary sets $A, B,$ and $C$. Then, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ means: 
+                            \begin{align*}
+                                \text{i. } &A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C) \text{ and} \\
+                                \text{ii. } &(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C).
+                            \end{align*}
+
+                            \begin{enumerate}
+                                \item ``$A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$" means ``For all $x \in A \cap (B \cup C)$, $x \in (A \cap B) \cup (A \cap C)$." Therefore, we fix an arbitrary $x \in A \cap (B \cup C)$. Ergo, $x \in A$ and $x \in B \cup C$. So, we consider:\\
+
+                                    \quad\emph{Case 1:} Assume $x \in B$. Then, $x \in A$ and $x \in B$. Thus, $x \in A \cap B$. Therefore, $x \in (A \cap B) \cup (A \cap C)$. \\
+    
+                                    \quad\emph{Case 2:} Assume $x \in C$. Then, $x \in A$ and $x \in C$. Thus, $x \in A \cap C$. Therefore, $x \in (A \cap B) \cup (A \cap C)$. \\
+
+                                \item ``$(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)$" means ``For all $x \in (A \cap B) \cup (A \cap C)$, $x \in A \cap (B \cup C)$." Therefore, we fix an arbitrary $x \in (A \cap B) \cup (A \cap C)$. Ergo, $x \in A \cap B$ or $x \in A \cap C$. So, we consider:\\
+
+                                    \quad\emph{Case 3:} Assume $x \in A \cap B$. Then, $x \in A$ and $x \in B$. Since, $x \in B$, $x \in B \cup C$. Thus, $x \in A \cap (B \cup C)$. \\
+                                    
+                                    \quad\emph{Case 4:} Assume $x \in A \cap C$. Then, $x \in A$ and $x \in C$. Since, $x \in C$, $x \in B \cup C$. Thus, $x \in A \cap (B \cup C)$.
+                            \end{enumerate}
+                        \end{proof}
+
+                    %---------2c---------%
+    			\item Prove (16): For all sets $A$, $B$, and $C$, if $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
+                        \begin{proof}
+                            Fix arbitrary sets $A$, $B$, and $C$ and assume $A \subseteq B$ and $B \subseteq C$. This means that: ``For all $x \in A$, $x \in B$" and ``For all $x \in B$, $x \in C$." Therefore, if $x \in A$, $x \in B$. Following that, if $x \in B$, $x \in C$. Thus, for all $x \in A$, $x \in C$. Thus, $A \subseteq C$.
+                        \end{proof}
+    		\end{enumerate}
+
+            %---------------Question 3---------------%
+    	\item Prove that, for all sets $A$ and $B$, $\text{if } A \subseteq B, \text{ then } \mathcal{P}(A) \subseteq \mathcal{P}(B)$.
+                \begin{proof}
+                    Fix arbitrary sets $A$ and $B$ and assume that $A \subseteq B$. This means that: ``For all $x \in A$, $x \in B$". Note that $\mathcal{P}(A)$ is the set of all subsets of $A$. Thus, let $x \in \mathcal{P}(A)$. Then, $x \subseteq A$ which implies that $x \subseteq B$. Therefore, $x \in \mathcal{P}(B)$. Thus, for all $x \in \mathcal{P}(A)$, $x \in \mathcal{P}(B)$. Ergo, $\mathcal{P}(A) \subseteq \mathcal{P}(B)$.
+                \end{proof}
+
+            %---------------Question 4---------------%
+    	\item Let $\mathcal{A} = \{ \{ 1, 2, 3 \}, \{ 2, 3, 4 \}, \{ 3, 4, 5, 6 \} \}$ and $\mathcal{B} = \{ \{ 1, 3, 5, 7 \}, \{ 2, 4, 6, 8 \}, \{ 3,          4, 5, 6 \} \}$.
+    		Compute each of the following:
+    		\begin{enumerate}
+
+                    %---------4a---------%
+    			\item $\displaystyle \bigcap \mathcal{A} = \{ 3 \}$.
+
+                    %---------4b---------%
+    			\item $\displaystyle \bigcup \mathcal{B} = \{ 1, 2, 3, 4, 5, 6, 7, 8 \}$.
+
+                    %---------4c---------%
+    			\item $\mathcal{A} \cup \mathcal{B} = \{ \{ 1, 2, 3 \}, \{ 2, 3, 4 \}, \{ 1, 3, 5, 7 \}, \{ 2, 4, 6, 8 \}, \{ 3, 4, 5, 6 \} \}$.
+
+                    %---------4d---------%
+    			\item $\displaystyle \bigcup \left( \mathcal{A} \cap \mathcal{B} \right) = \bigcup(\{ {3, 4, 5, 6} \}) = \{ 3, 4, 5, 6 \}$.
+    		\end{enumerate}
+
+            %---------------Question 5---------------%
+    	\item Find a simpler way to write each of the following sets
+    		\begin{enumerate}
+
+                    %---------5a---------%
+    			\item $\displaystyle \bigcup_{i=0}^{\infty} \{ \minus i, i \} = \{ 0 \} \cup \{ \minus 1, 1 \} \cup \{\minus 2, 2 \} \cup \cdots \cup \{ \minus \infty, \infty \} = \mathbb{Z}$.
+
+                    %---------5b---------%
+    			\item $\displaystyle \bigcap_{i=1}^{\infty} \left ( \minus\frac{1}{i}, \frac{1}{i} \right) = \left (\minus \frac{1}{1}, \frac{1}{1} \right), \  \left (\minus\frac{1}{2}, \frac{1}{2} \right), \  \cdots, \ \left (\minus\frac{1}{\infty}, \frac{1}{\infty} \right)  = 0$.\\\\
+    		\end{enumerate}
+    \end{enumerate}
+    
+    \textbf{Bonus Questions:}
+    
+    \begin{itemize}
+            %---------------Question B1---------------%
+    	\item [(B1)] Let $\mathcal{A}$ and $\mathcal{B}$ be sets of sets.  Prove that, if $\mathcal{A} \subseteq \mathcal{B}$, then $\bigcup \mathcal{A} \subseteq \bigcup \mathcal{B}$.
+                \begin{proof}
+                    Let $\mathcal{A}$ and $\mathcal{B}$ be sets of sets and suppose that $\mathcal{A} \subseteq \mathcal{B}$. This means that: ``For all sets $x \in \mathcal{A}$, $x \in \mathcal{B}$". This further implies that: ``For all $y \in x \in \mathcal{A}$, $y \in x \in \mathcal{B}$." Now, let $\bigcup \mathcal{A} = \{ y: y \in x \ \text{for some} \ x \in \mathcal{A} \}$. However, since all values of $y$ must exist in $\mathcal{B}$, we can say that all values of $\bigcup \mathcal{A}$ must exist in $\bigcup \mathcal{B}$, or $\bigcup \mathcal{A} \subseteq \bigcup \mathcal{B}$. 
+                \end{proof}
+
+            %---------------Question B2---------------%
+    	\item [(B2)] Suppose that $\mathcal{A}$ and $\mathcal{B}$ are sets of sets.  If $\mathcal{A} \subseteq \mathcal{B}$, then can we conclude that $\bigcap \mathcal{A} \subseteq \bigcap \mathcal{B}$?
+    		Justify your answer with a proof.
+                \begin{proof}
+                    Let $\mathcal{A} = \{ \{1, 2, 3 \}, \{ 3, 4 \} \}$ and $\mathcal{B} = \{ \{1, 2, 3 \}, \{ 3, 4 \}, \{ 5, 6 \}\}$. Then, $\mathcal{A} \subseteq \mathcal{B}$. However, $\bigcap \mathcal{A} = \{ 3 \}$, but $\bigcap \mathcal{B} = \{ \text{\O} \}$. Therefore, we cannot assume that, given sets of sets $\mathcal{A}$ and $\mathcal{B}$ where $\mathcal{A} \subseteq \mathcal{B}$, $\bigcap \mathcal{A} \subseteq \bigcap \mathcal{B}$.
+                \end{proof}
+    \end{itemize}
+
+\end{document}

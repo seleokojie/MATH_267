@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, amsfonts, textcomp}
+\DeclareMathSymbol{\minus}{\mathbin}{AMSa}{"39}
+
+\title{MATH 267 - Homework 2}
+\author{Sele Okojie}
+\date{February 13, 2023}
+
+\begin{document}
+
+    \maketitle
+
+    \begin{enumerate}
+       
+	\item Prove that, for all integers $a$ and $b$, if $a \ |\ b$, then $a\ |\minus b$.
+            \begin{proof}
+                Fix arbitrary integers $a$ and $b$ and assume that $a \ |\ b$. Then, there exists an arbitrary integer $c$ such that $a \cdot c = b$. Hence,
+                \begin{alignat*}{2}
+                    a \cdot c \cdot (\minus 1) &= b \cdot (\minus 1) \\
+                    a \cdot c \cdot (\minus 1) &= \minus b \\
+                    a \cdot d &= \minus b &\qquad &\textrm{Letting $d = c \cdot ( \minus 1)$.} \\
+                \end{alignat*}
+                Thus,  $a \ | \minus b$.
+            \end{proof}
+
+        %---------------Question 2---------------%
+	\item Prove that, for all integers $a$, $b$, and $c$, if $a \ |\ b$ and $b \ |\ c$, then $a \ |\ c$.  (This is called ``transitivity of dividing''.)
+            \begin{proof}
+                Fix arbitrary integers $a$, $b$, and $c$ and assume that $a \ |\ b$ and $b \ |\ c$. Then, there exists integers $m$ and $n$ such that $a \cdot m = b$ and $b \cdot n = c$. Hence,
+                \begin{alignat*}{2}
+                    c = \ &b \cdot n \\
+                    = \ &(a\cdot m) \cdot n \\
+                    = \ &a \cdot (m \cdot n) \\
+                    = \ &a \cdot d &\qquad &\textrm{Letting $d = (m \cdot n)$.}  
+                \end{alignat*}
+                Thus, $a \ | \ c$.
+            \end{proof}
+
+        %---------------Question 3---------------%
+	\item Prove that the following statement is false:
+        \begin{quotation}
+    	``For all integers $a$ and $b$, if $a \ |\ b$ and $b \ |\ a$, then $a = b$.''
+        \end{quotation}
+            We must prove the negation: ``There exists integers $a$ and $b$ such that $a \ |\  b$ and $b\ |\  a$, but $a \ne b$."
+            \begin{proof}
+                Let $a = 2\in \mathbb{Z}$ and b = $\minus 2\in \mathbb{Z}$. Then, since $a \cdot c = b$ and $b \cdot d = a$ for some integers $c$ and $d$, \begin{alignat*}{2}
+                    2 \cdot c = -2, \ c = -1. \\
+                    -2 \cdot d = 2, \ d = -1.
+                \end{alignat*}
+                Thus, $a \ |\  b$ and $b\ |\  a$, but $a \ne b$.
+            \end{proof}
+            Since we proved the negation, the original statement must be false.
+            
+        %---------------Question 4---------------%
+	\item Prove that, for all integers $a$, $4 \cdot a + 2$ is even.
+            \begin{proof}
+                Fix an arbitrary integer $a$. Then,
+                \begin{alignat*}{2}
+                    4 \cdot a + 2 &= 2\cdot(2\cdot a + 1) \\
+                    &= 2 \cdot d.
+                \end{alignat*}
+                Thus, $2 \ |\  4 \cdot a + 2$. Therefore, we can say that $4 \cdot a + 2$ is even.
+            \end{proof}
+
+        %---------------Question 5---------------%
+	\item Prove that the following statement is false:
+        \begin{quotation}
+            ``For all integers $a$, $5 \cdot a + 2$ is even.''
+        \end{quotation}
+            We must prove the negation: ``There exists an integer a such that $5 \cdot a + 2$ is not even."
+            \begin{proof}
+                Let $a = 1\in \mathbb{Z}$. Note that if an integer $a$ is not even, it is odd, that is, $a = 2 \cdot c + 1$, where $c \in \mathbb{Z}$. Thus,
+                \begin{alignat*}{2}
+                    5 \cdot a + 2 &= 5 \cdot 1 + 2 \\
+                    &= 5 + 2 = 7 \\
+                    &= 2 \cdot (3) + 1 \\
+                    &= 2\cdot c + 1 &\qquad &\textrm{Letting $c = 3$.}  
+                \end{alignat*}
+                Thus, $5 \cdot a + 2$ is odd, which means that it is not even. 
+            \end{proof}
+            Since we proved the negation, the original statement must be false.
+        
+        %---------------Question 6---------------%
+	\item Prove that, for all integers $a$, if $a^3$ is even, then $a$ is even. \\\\
+            We will prove the contrapositive: ``For all integers $a$, if $a$ is odd, then $a^3$ is odd."
+            \begin{proof}
+                Fix an arbitrary integer a and assume that $a$ is odd. Then, $a = 2 \cdot c + 1$, $c\in \mathbb{Z}$. So,
+                \begin{alignat*}{2}
+                    a^3 = (2\cdot c + 1)^3 &= 8\cdot c^3 + 12 \cdot c^2 + 6\cdot c + 1 \\
+                    &= 2\cdot(4\cdot c^3 + 6 \cdot c^2 + 3\cdot c) + 1 \\
+                    &= 2 \cdot d + 1 \qquad \textrm{Letting $d = 4\cdot c^3 + 6 \cdot c^2 + 3\cdot c$.}
+                \end{alignat*}
+                Therefore, $a^3$ is odd.
+            \end{proof}
+            Since we proved the contrapositive, the original statement must be true.
+
+        %---------------Question 7---------------%
+	\item Prove that $\sqrt[3]{2}$ is irrational.
+            \begin{proof}
+                Suppose that $\sqrt[3]{2}$ is rational. Then, there exists integers $a$ and $b$ such that $\sqrt[3]{2} = \dfrac{a}{b}$. We can further assume that $a$ and $b$ share no common factors other than $1$ (co-prime). Thus,
+                \begin{alignat*}{2}
+                    2 &= \dfrac{a^3}{b^3} \\
+                    2\cdot b^3 &= a^3.
+                \end{alignat*}
+                Thus, $a^3$ is an even integer and, by Question 6, $a$ is an even integer. So, we can say $a = 2 \cdot c$, where $c\in \mathbb{Z}$. Then,
+                \begin{alignat*}{2}
+                    2\cdot b^3 &= (2\cdot c)^3 \\
+                    2\cdot b^3 &= 8 \cdot c^3 \\
+                    b^3 &= 4 \cdot c^3 = 2 \cdot(2\cdot c^3).
+                \end{alignat*}
+                Thus, $b^3$ is an even integer and, by Question 6, $b$ is an even integer.\\\\ Since $a$ and $b$ are even, they share a common factor of $2$. However, we assumed that $a$ and $b$ share no common factors other than $1$. This is a contradiction. Thus, we reject our previous assumptions and say that $\sqrt[3]{2}$ is irrational.
+            \end{proof}
+
+        %---------------Question 8---------------%
+	\item Prove that, for all integers $a$, $a \le |a|$.
+            \begin{proof}
+                Fix an arbitrary integer $a$. We can split this into 2 cases: $a \ge 0$ and $a < 0$. \\
+
+                \emph{Case 1: Assume $a \ge 0$}: Then, $a \le |a| = a$. \\\\
+                \emph{Case 2: Assume $a < 0$}: Then, $a \le |\minus 1\cdot a| = |\minus1| \cdot |a| = (\minus 1)\cdot (\minus 1) \cdot a = a$ \\\\
+                In both cases, we have proven that $a \le |a|$. These cases span all integers. Thus, $a \le |a|$.
+            \end{proof}
+
+        %---------------Question 9---------------%
+	\item Prove that, for all integers $a$, if $a > 2$ and $a$ is prime, then $a$ is odd.
+            \begin{proof}
+                Suppose that there exists an even prime integer $a > 2$. Then, $a = 2\cdot k$, where $k\in \mathbb{Z}$. Then,
+                \begin{alignat*}{2}
+                    a &> 2 \\
+                    (2 \cdot k) &> 2 \qquad \textrm{(substituting into the inequality)} \\
+                    k &> 1 \equiv k \ge 2.
+                \end{alignat*}
+                Then, since $a$ is even and $k \ge 2$, $a$ has at least two factors greater than or equal to $2$: $2$ and $k \ge 2$. However, a is prime. This is a contradiction. Thus, we reject our previous assumptions and say that, for all integers $a$, if $a > 2$ and $a$ is prime, then $a$ is odd.
+            \end{proof}
+
+        %---------------Question 10---------------%
+	\item Prove that, for all integers $a$, $a$ is even if and only if $a^2$ is even.
+            \begin{proof}
+                Fix an arbitrary integer $a$. Then,\\
+
+                \quad \emph{$(\implies)$}: Assume $a$ is even. Then, $a = 2\cdot k$, where $k \in \mathbb{Z}$. Then,
+                \begin{alignat*}{2}
+                    a^2 &= (2 \cdot k)^2 = 4\cdot k^2 = 2\cdot (2\cdot k^2) \\
+                    &= 2\cdot l \qquad \textrm{(Letting $l = 2\cdot k^2$).}
+                \end{alignat*}
+                \quad Thus, $a^2$ is an even integer. \\
+
+                \quad \emph{$(\impliedby)$}: Assume $a^2$ is even. Then, by Theorem 2.1.8, $a$ is even.
+
+            \end{proof}
+        
+\end{enumerate}
+
+\newpage
+\textbf{Bonus Questions:}
+
+\begin{itemize}
+        %---------------Question B1---------------%
+	\item [(B1)] Prove that, for all positive integers $a$ and $b$, if $a \ |\ b$ and $b \ |\ a$, then $a = b$.
+            \begin{proof}
+                Fix arbitrary positive integers $a$ and $b$ and assume that $a \ |\ b$ and $b \ |\ a$. Then, $a = m \cdot b$ and $b = n \cdot a$, where $m, n \in \mathbb{Z}$. Then, 
+                \begin{alignat*}{2}
+                    a\cdot b &= m\cdot n\cdot a\cdot b \\
+                    1 &= m\cdot n.
+                \end{alignat*}
+                Thus, $m = n = -1$ or $m = n = 1$. Then, $a = \minus b$ or $a = b$. However, we know that $a$ and $b$ are positive, so $a \ne \minus b$. Therefore, $a = b$.
+            \end{proof}
+
+        %---------------Question B2---------------%
+	\item [(B2)] Prove that $\sqrt{3}$ is irrational.  (You may use the fact, without proof, that, if $a$ is not divisible by $3$, then $a = 3 \cdot c + 1$ or $a = 3 \cdot c + 2$ for some integer $c$.  This follows from the Quotient-Remainder Theorem, which we will learn later.)
+            \begin{proof}
+                Suppose $\sqrt{3}$ is rational. Then, by the Well-Ordering Property, let $a$ be the smallest positive integer whose product with $\sqrt{3}$ is an integer. We want a smaller positive integer that, when multiplied with $\sqrt{3}$ results in an integer. To get a smaller integer, we must multiply by some integer less than $1$. To get a positive integer, we must multiply by something positive. To get an integer, we must multiply by $(\sqrt{3} + b)$, where $b\in \mathbb{Z}$. Thus, the only integer k that makes $0 < \sqrt{3} + b < 1$ is $\minus 1$, since $1 < \sqrt{3} < 2$.\\\\
+                Therefore, let $c = (\sqrt{3} - 1)\cdot a$. Then, $c$ is a smaller positive integer whose product with $\sqrt{3}$ is an integer. However, we assumed $a$ was the smallest positive integer whose product with $\sqrt{3}$ is an integer. This is a contradiction. Thus, we reject our previous assumptions and say that $\sqrt{3}$ is irrational. 
+            \end{proof}
+
+        
+\end{itemize}
+
+\end{document}

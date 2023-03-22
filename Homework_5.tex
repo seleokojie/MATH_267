@@ -1,0 +1,203 @@
+\documentclass{article}
+\usepackage{267_Lib}
+
+\title{MATH 267 - Homework 5}
+\author{Sele Okojie}
+\date{March 6, 2023}
+
+\begin{document}
+    \maketitle
+    
+    \begin{enumerate}
+
+            %---------------Question 1---------------%
+    	\item What are the possible partitions of $\{ 1, 2, 3 \}$? \\\\
+                 The possible partitions of $\{ 1, 2, 3 \}$ are:
+                \begin{itemize}
+                     \item $\bigl\{ \{1\}, \{2\}, \{3\} \bigr\}$
+                     \item $\bigl\{ \{1, 2\}, \{3\} \bigr\}$
+                     \item $\bigl\{ \{1, 3\}, \{2\} \bigr\}$
+                     \item $\bigl\{ \{1\}, \{2, 3\} \bigr\}$
+                     \item $\bigl\{ \{1, 2, 3\} \bigr\}$
+                 \end{itemize}
+
+            %---------------Question 2---------------%
+    	\item Which of the following sets are partitions of $A = \{1, 2, 3, 4, 5 \}$?
+    	    \begin{align*}
+    			P = & \ \{ \{ 1, 3, 5 \}, \{ 2, 4 \} \}, \\
+    			Q = & \ \{ \{ 1, 2, 3 \}, \{ 3, 4, 5 \} \}, \\
+    			R = & \ \{ \{ 1 \}, \{ 2 \}, \{ 3 \}, \{ 4 \}, \{ 5 \} \}, \\
+    			S = & \ \{ \{ 1, 2 \}, \{ 3, 4 \} \}, \\
+    			T = & \ \{ 1, 2, 3, 4, 5 \}.
+    	    \end{align*}
+                \begin{itemize}
+                    \item $P$ is a partition of $\{1, 2, 3, 4, 5 \}$.
+                    \item $Q$ is not a partition of $\{1, 2, 3, 4, 5 \}$ since two elements of $Q$ share the common element $3$.
+                    \item $R$ is a partition of $\{1, 2, 3, 4, 5 \}$.
+                    \item $S$ is not a partition of $\{1, 2, 3, 4, 5 \}$ since the element $5 \in A$ does not belong to some element of $S$.
+                    \item $T$ is not a partition of $\{1, 2, 3, 4, 5 \}$ since $T$ is not a subset of the power set of $A$.
+                \end{itemize}
+                
+            %---------------Question 3---------------%
+    	\item For each partition in the previous question, find the corresponding equivalence relation.
+                \begin{enumerate}
+                    \item $E_P = \bigl\{ (1, 1), (1, 3), (1, 5), (2, 2), (2, 4), (3, 1), (3, 3), (3, 5), (4, 2), (4, 4), (5, 1), (5, 3), (5, 5) \bigr\}$.
+                    \item $E_R = \bigl\{ (1, 1), (2, 2), (3, 3), (4, 4), (5, 5) \bigr\}$.
+                \end{enumerate}
+
+            %---------------Question 4---------------%
+    	\item Consider $\mathcal{C} = \{ \{ n \in \mathbb{Z} : n < 0 \}, \{ 0 \}, \{ n \in \mathbb{Z} : n > 0 \} \}$.
+    		\begin{enumerate}
+
+                    %---------4a---------%
+    			\item Prove that $\mathcal{C}$ is a partition of $\mathbb{Z}$.
+                        \begin{proof}
+                            To prove that $\mathcal{C}$ is a partition of $\mathbb{Z}$, we need to prove that:\
+                                \begin{align*}
+                                    \text{i. }   & \text{\textbf{Non-empty:} No element of $\mathcal{C}$ = \O,}  \\
+                                    \text{ii. }  & \text{\textbf{Covering:} Every element of $\mathbb{Z}$ belongs to some element in $\mathcal{C}$, and} \\
+                                    \text {iii. }& \text{\textbf{Disjointedness:} There are no overlapping elements.}
+                                \end{align*}
+                                
+                            \begin{enumerate}[i.]
+                                \item\textbf{(Non-empty):} 
+                                    Consider each element of $\mathcal{C}$. For example, $\{ n\in\mathbb{Z} : n < 0\}$ is the set of all integers less than zero. This set is non-empty because it solely contains negative integers (eg., $\minus 1, \minus 2,$ etc.). Similarly, $\{ 0 \}$ is empty because it solely contains the integer $0$, and $\{ n\in\mathbb{Z} : n > 0\}$ is non-empty because it solely contains positive integers (eg., $1, 2,$ etc.). Therefore, every element of $\mathcal{C}$ is non-empty. \\ 
+
+                                \item \textbf{(Covering):} To prove this, we need to show that every integer belongs to at least one element of $\mathcal{C}$ and that no integer belongs to more than one element of $\mathcal{C}$.
+                                    \begin{subproof}[Subproof 1]
+                                        Let $x\in\mathbb{Z}$. Then, if $x < 0$, then $x \in\{ n\in\mathbb{Z}:n < 0 \}$, which is an element of $\mathcal{C}$. If $x > 0$, then $x \in\{ n\in\mathbb{Z}:n > 0 \}$, which is also an element of $\mathcal{C}$. Finally, if $x = 0$, then $x \in\{ 0 \}$, which is an element of $\mathcal{C}$. Therefore, every integer belongs to at least one element of $\mathcal{C}$.
+                                    \end{subproof}
+                                    \begin{subproof}[Subproof 2]
+                                        Suppose that there exists $x\in\mathbb{Z}$ that belongs to two distinct elements of $\mathcal{C}$, say $A$ and $B$. Without loss of generality, assume that $A = \{ n\in\mathbb{Z}:n < 0 \}$ and $B = \{ n\in\mathbb{Z}:n > 0 \}$. Then, $x < 0$ (since $x \in A$) and $x > 0$ (since $x \in B$). This is a contradiction. Thus, we reject our assumptions and conclude that no integer belongs to more than one element of $\mathcal{C}$.
+                                    \end{subproof}
+                                    Combining these results, we can conclude that every element of $\mathbb{Z}$ belongs to some element of $C$. \\
+
+                                \item\textbf{(Disjointedness):} To prove this, we need to show that every pair of distinct elements in $\mathcal{C}$ has an empty intersection
+                                    \begin{subproof}[Subproof]
+                                        Let $A$ and $B$ be distinct elements of $\mathcal{C}$ and let an arbitrary $x\in\mathbb{Z}$. If $x \in A$, then $x < 0$. On the other hand, if $x \in B$, then $x > 0$. Therefore, $x$ cannot belong to both $A$ and $B$, meaning that $A \cap B =$ \O. Since $A$ and $B$ were arbitrary distinct elements of $\mathcal{C}$, we can conclude that every pair of distinct elements of $\mathcal{C}$ is disjoint.
+                                    \end{subproof}
+                                Since $\mathcal{C}$ satisfied all three conditions, we can conclude that $\mathcal{C}$ is a partition of $\mathbb{Z}$.
+                            \end{enumerate}
+                                
+                        \end{proof}
+
+                    %---------4b---------%
+    			\item Find the equivalence relation corresponding to $\mathcal{C}$.
+                        \\\\\quad The equivalence relation corresponding to $\mathcal{C}$ is: 
+                        \[
+                            a \sim b \text{ iff } a \text{ and } b \text{ belong to the same element in } \mathcal{C}\text{, that is}
+                        \]
+                        \[
+                            a \sim b \text{ iff } \{ a, b \} \subseteq \{ n\in\mathbb{Z}:n < 0 \} \text{, or } \{ a, b \} \subseteq \{ 0 \} \text{, or } \{ a, b \} \subseteq \{ n\in\mathbb{Z}:n > 0 \}.
+                        \]
+                        
+    		\end{enumerate}
+
+            %---------------Question 5---------------%
+    	\item Consider $\mathcal{C} = \{ \{ 2n : n \in \mathbb{Z} \}, \{ 2n+1 : n \in \mathbb{Z} \} \}$.
+    		\begin{enumerate}
+
+                    %---------5a---------%
+    			\item Prove that $\mathcal{C}$ is a partition of $\mathbb{Z}$.
+                        \begin{proof}
+                            To prove that $\mathcal{C}$ is a partition of $\mathbb{Z}$, we need to prove that:\
+                                \begin{align*}
+                                    \text{i. }   & \text{\textbf{Non-empty:} No element of $\mathcal{C}$ = \O,}  \\
+                                    \text{ii. }  & \text{\textbf{Covering:} Every element of $\mathbb{Z}$ belongs to some element in $\mathcal{C}$, and} \\
+                                    \text {iii. }& \text{\textbf{Disjointedness:} There are no overlapping elements.}
+                                \end{align*}
+                                
+                            \begin{enumerate}[i.]
+                                \item\textbf{(Non-empty):} 
+                                    Consider each element of $\mathcal{C}$. For example, $\{ 2n : n \in \mathbb{Z} \}$ is the set of all even integers. This set is non-empty because it solely contains even integers (eg., $0, 2,$ etc.). Similarly, $\{ 2n+1 : n \in \mathbb{Z} \}$ is non-empty because it solely contains odd integers (eg., $1, 3,$ etc.). Therefore, every element of $\mathcal{C}$ is non-empty. \\ 
+
+                                \item \textbf{(Covering):} To prove this, we need to show that every integer belongs to at least one element of $\mathcal{C}$ and that no integer belongs to more than one element of $\mathcal{C}$.
+                                    \begin{subproof}[Subproof]
+                                        Fix an arbitrary $x\in\mathbb{Z}$. Then, we can write $x$ as $x = 2n$ or $x = 2n+1$, for some $n\in\mathbb{Z}$. If $x = 2n$, then $x \in \{ 2n : n \in \mathbb{Z} \}$. Similarly, if $x = 2n+1$, then $x \in \{ 2n+1 : n \in \mathbb{Z} \}$. Therefore, every integer belongs to either $\{ 2n : n \in \mathbb{Z} \}$ or $\{ 2n+1 : n \in \mathbb{Z} \}$ and thus belongs to some element in $\mathcal{C}$.
+                                    \end{subproof}
+
+                                \item\textbf{(Disjointedness):} To prove this, we need to show that every pair of distinct elements in $\mathcal{C}$ has an empty intersection
+                                    \begin{subproof}[Subproof]
+                                        Let $A = \{ 2n : n \in \mathbb{Z} \}$ and $B = \{ 2n+1 : n \in \mathbb{Z} \}$ be distinct elements of $\mathcal{C}$ and suppose an arbitrary $x\in\mathbb{Z}$ belongs to both $A$ and $B$. Then, $x$ can be written as $x = 2n$ and $x = 2m + 1$, for some $n,m\in\mathbb{Z}$. But then we have $2n = 2m + 1$, which implies that $n = (m + \frac{1}{2})$. However, $n$ and $m$ are integers, so $(m + \frac{1}{2})$ cannot be an integer, which is a contradiction. Thus, we reject our assumptions and conclude that every pair of distinct elements of $\mathcal{C}$ is disjoint.
+                                    \end{subproof}
+                                Since $\mathcal{C}$ satisfied all three conditions, we can conclude that $\mathcal{C}$ is a partition of $\mathbb{Z}$.
+                            \end{enumerate}
+                            
+                        \end{proof}
+
+                    %---------5b---------%
+    			\item Find the equivalence relation corresponding to $\mathcal{C}$.
+                        \\\\\quad The equivalence relation corresponding to $\mathcal{C}$ is: 
+                        \[
+                            a \sim b \text{ iff } a \text{ and } b \text{ belong to the same element in } \mathcal{C}\text{, that is}
+                        \]
+                        \[
+                            a \sim b \text{ iff } \bigl(a,b\in\{ 2n : n\in\mathbb{Z} \}\bigr) \text{ or } \bigl(a,b\in\{ 2n : n\in\mathbb{Z} \}\bigr)
+                        \]
+    		\end{enumerate}
+
+            %---------------Question 6---------------%
+    	\item Prove that the following is \textbf{not} a partition of $\mathbb{Z}$:
+    		\[
+    			\mathcal{C} = \{ \{ 2n : n \in \mathbb{Z} \}, \{ 3n : n \in \mathbb{Z} \} \}.
+    		\]
+                \begin{proof}
+                    Let $n = 1\in\mathbb{Z}$. Then, $1 \notin \{ 2n : n \in \mathbb{Z} \}$ and $1 \notin \{ 3n : n \in \mathbb{Z} \}$. Therefore, $n\in\mathbb{Z}$ does not belong to any element in $\mathcal{C}$. Thus, $\mathcal{C}$ does not cover all elements in $\mathbb{Z}$, and hence is not a partition of $\mathbb{Z}$. 
+                \end{proof}
+    \end{enumerate}
+    
+    \newpage
+    \textbf{Bonus Questions:}
+    
+    \begin{itemize}
+
+            %---------------Question B1---------------%
+    	\item [(B1)] Justify your answer to question (1).
+                \begin{proof}
+                    To show that these are the only possible partitions of $\{ 1, 2, 3 \}$, we need to show that any other set of subsets of $\{ 1, 2, 3 \}$ fails to satisfy at least one of the properties of a partition. 
+                    \\\\Let $\mathcal{C}$ be any set of subsets of $\{ 1, 2, 3 \}$.
+
+                    \begin{caseof}
+                        \case{($\mathcal{C}$ contains a set with more than one element)}{\\
+                            Suppose that $\{ a, b \} \in\mathcal{C}$, where $a$ and $b$ are distinct elements. Then, $\{ a, b \}$ cannot be in the same element of any partition, since the elements of any partition must be disjoint. Therefore, $\mathcal{C}$ cannot be a partition.
+                        }\case{($\mathcal{C}$ contains \O)}{\\
+                            Suppose that \O $\ \in\mathcal{C}$. Then, \O\ cannot be in the same element as any partition as any other element, since the elements of any partition must be non-empty. Therefore, $\mathcal{C}$ cannot be a partition. 
+                        }\case{($\mathcal{C}$ contains each element of $\{ 1, 2, 3 \}$ in a separate set)}{\\
+                            Suppose that $\{ 1 \}, \{ 2 \}$, $\{ 3 \} \in \mathcal{C}$. Then, these sets form a partition of $\{ 1, 2, 3 \}$ since every element is in one of the sets, the sets are non-empty, and they are disjoint.
+                        }\case{($\mathcal{C}$ contains two elements of $\{ 1, 2, 3 \}$ in one set and the third element in another set)}{\\
+                            Suppose that $\{ a, b \}, \{ c \} \in \mathcal{C}$, where $a$, $b$, and $c$ are distinct elements of $\{ 1, 2, 3 \}$. Then, these sets form a partition of $\{ 1, 2, 3 \}$ since every element is in one of the sets, the sets are non-empty, and they are disjoint.
+                        }\case{($\mathcal{C}$ contains all three elements of $\{ 1, 2, 3 \}$ in one set)}{\\
+                            Suppose that $\{ 1, 2, 3 \} \in \mathcal{C}$. Then, this set forms a partition of $\{ 1, 2, 3 \}$ since every element is in the set, the set is non-empty, and it contains all elements of $\{ 1, 2, 3 \}$.
+                        }
+                    \end{caseof}
+                    Therefore, any possible partition of $\{ 1, 2, 3 \}$ must be one of:
+                    \[
+                        \bigl\{ \{1\}, \{2\}, \{3\} \bigr\}, \bigl\{ \{1, 2\}, \{3\} \bigr\}, \bigl\{ \{1, 3\}, \{2\} \bigr\}, \bigl\{ \{1\}, \{2, 3\} \bigr\}, \text{ or } \bigl\{ \{1, 2, 3\} \bigr\}.
+                    \]
+
+                \end{proof}
+
+            %---------------Question B2---------------%
+    	\item [(B2)] Prove that, for all finite sets $A$, the number of equivalence relations on $A$ is equal to the number of partitions on $A$.
+                \begin{proof}
+                    Fix an arbitrary finite set $A$. 
+                    \begin{caseof}
+                        \case{($\impliedby$) We will show that every partition of $A$ corresponds to an equivalence relation on $A$.}{\\
+                            Let $\mathcal{C}$ be a partition of $A$ and define a relation $\sim$ as follows: 
+                            \[
+                                \text{For a, b } \in A, a \sim b \text{ iff }a \text{ and } b \text{ are in the same element of } \mathcal{C}.
+                            \]
+                            Then, $\sim$ is reflexive, symmetric, and transitive since each element of $A$ is in exactly one element of $\mathcal{C}$. Therefore, $\sim$ is an equivalence relation on $A$.
+                        }\case{($\implies$) We will show that every equivalence relation on $A$ corresponds to a partition of $A$.}{\\
+                            Let $\sim$ be an equivalence relation on $A$ and define a set $\mathcal{C}$ of subsets of $A$ as follows:
+                            \begin{align*}
+                                &\text{For each $a \in A$, let $[a]_\sim$ be the equivalence class of $a$ under $\sim$, and } \\
+                                &\text{let $\mathcal{C}$ consist of all such equivalence classes.} 
+                            \end{align*}
+                            We claim this is a partition of $A$. To see this, note that every element of $A$ is in exactly one equivalence class (since $\sim$ is an equivalence relation), so the elements of $\mathcal{C}$ cover all of $A$. Furthermore, every equivalence class is non-empty (since $a \sim a$ for all $a \in A$), and no two equivalence classes intersect (since if $[a]$ and $[b]$ intersect, then $a \sim b$). Therefore, $\mathcal{C}$ is a partition of $A$.
+                        }
+                    \end{caseof}
+                    We have shown that there is a one to one correspondence between the set of partitions of A and the set of equivalence relations on $A$. Thus, it follows that, for all finite sets $A$, the number of equivalence relations on $A$ is equal to the number of partitions on $A$.
+                \end{proof}
+    \end{itemize}
+\end{document}

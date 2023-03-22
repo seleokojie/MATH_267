@@ -151,53 +151,54 @@
     
     \begin{itemize}
 
-            %---------------Question B1---------------%
-    	\item [(B1)] Justify your answer to question (1).
-                \begin{proof}
-                    To show that these are the only possible partitions of $\{ 1, 2, 3 \}$, we need to show that any other set of subsets of $\{ 1, 2, 3 \}$ fails to satisfy at least one of the properties of a partition. 
-                    \\\\Let $\mathcal{C}$ be any set of subsets of $\{ 1, 2, 3 \}$.
+        %---------------Question B1---------------%
+        \item [(B1)] Justify your answer to question (1).
+            \begin{proof}
+                To show that these are the only possible partitions of $\{ 1, 2, 3 \}$, we need to show that any other set of subsets of $\{ 1, 2, 3 \}$ fails to satisfy at least one of the properties of a partition. 
+                \\\\Let $\mathcal{C}$ be any set of subsets of $\{ 1, 2, 3 \}$.
 
-                    \begin{caseof}
-                        \case{($\mathcal{C}$ contains a set with more than one element)}{\\
-                            Suppose that $\{ a, b \} \in\mathcal{C}$, where $a$ and $b$ are distinct elements. Then, $\{ a, b \}$ cannot be in the same element of any partition, since the elements of any partition must be disjoint. Therefore, $\mathcal{C}$ cannot be a partition.
-                        }\case{($\mathcal{C}$ contains \O)}{\\
+                \begin{caseof}
+                    \case{($\mathcal{C}$ contains a set with more than one element)}{\\
+                        Suppose that $\{ a, b \} \in\mathcal{C}$, where $a$ and $b$ are distinct elements. Then, $\{ a, b \}$ cannot be in the same element of any partition, since the elements of any partition must be disjoint. Therefore, $\mathcal{C}$ cannot be a partition.
+                    }\case{($\mathcal{C}$ contains \O)}{\\
                             Suppose that \O $\ \in\mathcal{C}$. Then, \O\ cannot be in the same element as any partition as any other element, since the elements of any partition must be non-empty. Therefore, $\mathcal{C}$ cannot be a partition. 
-                        }\case{($\mathcal{C}$ contains each element of $\{ 1, 2, 3 \}$ in a separate set)}{\\
+                    }\case{($\mathcal{C}$ contains each element of $\{ 1, 2, 3 \}$ in a separate set)}{\\
                             Suppose that $\{ 1 \}, \{ 2 \}$, $\{ 3 \} \in \mathcal{C}$. Then, these sets form a partition of $\{ 1, 2, 3 \}$ since every element is in one of the sets, the sets are non-empty, and they are disjoint.
-                        }\case{($\mathcal{C}$ contains two elements of $\{ 1, 2, 3 \}$ in one set and the third element in another set)}{\\
+                    }\case{($\mathcal{C}$ contains two elements of $\{ 1, 2, 3 \}$ in one set and the third element in another set)}{\\
                             Suppose that $\{ a, b \}, \{ c \} \in \mathcal{C}$, where $a$, $b$, and $c$ are distinct elements of $\{ 1, 2, 3 \}$. Then, these sets form a partition of $\{ 1, 2, 3 \}$ since every element is in one of the sets, the sets are non-empty, and they are disjoint.
-                        }\case{($\mathcal{C}$ contains all three elements of $\{ 1, 2, 3 \}$ in one set)}{\\
+                    }\case{($\mathcal{C}$ contains all three elements of $\{ 1, 2, 3 \}$ in one set)}{\\
                             Suppose that $\{ 1, 2, 3 \} \in \mathcal{C}$. Then, this set forms a partition of $\{ 1, 2, 3 \}$ since every element is in the set, the set is non-empty, and it contains all elements of $\{ 1, 2, 3 \}$.
-                        }
-                    \end{caseof}
-                    Therefore, any possible partition of $\{ 1, 2, 3 \}$ must be one of:
+                    }
+                \end{caseof}
+                Therefore, any possible partition of $\{ 1, 2, 3 \}$ must be one of:
                     \[
                         \bigl\{ \{1\}, \{2\}, \{3\} \bigr\}, \bigl\{ \{1, 2\}, \{3\} \bigr\}, \bigl\{ \{1, 3\}, \{2\} \bigr\}, \bigl\{ \{1\}, \{2, 3\} \bigr\}, \text{ or } \bigl\{ \{1, 2, 3\} \bigr\}.
                     \]
 
-                \end{proof}
+            \end{proof}
 
-            %---------------Question B2---------------%
-    	\item [(B2)] Prove that, for all finite sets $A$, the number of equivalence relations on $A$ is equal to the number of partitions on $A$.
-                \begin{proof}
-                    Fix an arbitrary finite set $A$. 
-                    \begin{caseof}
-                        \case{($\impliedby$) We will show that every partition of $A$ corresponds to an equivalence relation on $A$.}{\\
-                            Let $\mathcal{C}$ be a partition of $A$ and define a relation $\sim$ as follows: 
+        %---------------Question B2---------------%
+        \item [(B2)] Prove that, for all finite sets $A$, the number of equivalence relations on $A$ is equal to the number of partitions on $A$.
+            \begin{proof}
+                Fix an arbitrary finite set $A$. 
+                \begin{caseof}
+                    \case{($\impliedby$) We will show that every partition of $A$ corresponds to an equivalence relation on $A$.}{\\
+                        Let $\mathcal{C}$ be a partition of $A$ and define a relation $\sim$ as follows: 
                             \[
                                 \text{For a, b } \in A, a \sim b \text{ iff }a \text{ and } b \text{ are in the same element of } \mathcal{C}.
                             \]
-                            Then, $\sim$ is reflexive, symmetric, and transitive since each element of $A$ is in exactly one element of $\mathcal{C}$. Therefore, $\sim$ is an equivalence relation on $A$.
-                        }\case{($\implies$) We will show that every equivalence relation on $A$ corresponds to a partition of $A$.}{\\
-                            Let $\sim$ be an equivalence relation on $A$ and define a set $\mathcal{C}$ of subsets of $A$ as follows:
-                            \begin{align*}
-                                &\text{For each $a \in A$, let $[a]_\sim$ be the equivalence class of $a$ under $\sim$, and } \\
-                                &\text{let $\mathcal{C}$ consist of all such equivalence classes.} 
-                            \end{align*}
-                            We claim this is a partition of $A$. To see this, note that every element of $A$ is in exactly one equivalence class (since $\sim$ is an equivalence relation), so the elements of $\mathcal{C}$ cover all of $A$. Furthermore, every equivalence class is non-empty (since $a \sim a$ for all $a \in A$), and no two equivalence classes intersect (since if $[a]$ and $[b]$ intersect, then $a \sim b$). Therefore, $\mathcal{C}$ is a partition of $A$.
-                        }
-                    \end{caseof}
-                    We have shown that there is a one to one correspondence between the set of partitions of A and the set of equivalence relations on $A$. Thus, it follows that, for all finite sets $A$, the number of equivalence relations on $A$ is equal to the number of partitions on $A$.
-                \end{proof}
+                        Then, $\sim$ is reflexive, symmetric, and transitive since each element of $A$ is in exactly one element of $\mathcal{C}$. Therefore, $\sim$ is an equivalence relation on $A$.
+                    }\case{($\implies$) We will show that every equivalence relation on $A$ corresponds to a partition of $A$.}{\\
+                        Let $\sim$ be an equivalence relation on $A$ and define a set $\mathcal{C}$ of subsets of $A$ as follows:
+                        \begin{align*}
+                            &\text{For each $a \in A$, let $[a]_\sim$ be the equivalence class of $a$ under $\sim$, and } \\
+                            &\text{let $\mathcal{C}$ consist of all such equivalence classes.} 
+                        \end{align*}
+                        We claim this is a partition of $A$. To see this, note that every element of $A$ is in exactly one equivalence class (since $\sim$ is an equivalence relation), so the elements of $\mathcal{C}$ cover all of $A$. Furthermore, every equivalence class is non-empty (since $a \sim a$ for all $a \in A$), and no two equivalence classes intersect (since if $[a]$ and $[b]$ intersect, then $a \sim b$). Therefore, $\mathcal{C}$ is a partition of $A$.
+                    }
+                \end{caseof}
+                We have shown that there is a one to one correspondence between the set of partitions of A and the set of equivalence relations on $A$. Thus, it follows that, for all finite sets $A$, the number of equivalence relations on $A$ is equal to the number of partitions on $A$.
+            \end{proof}
     \end{itemize}
+
 \end{document}

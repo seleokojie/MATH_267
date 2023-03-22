@@ -1,7 +1,5 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb, amsthm, amsfonts, textcomp, mathabx}
-\DeclareMathSymbol{\minus}{\mathbin}{AMSa}{"39}
+\usepackage{267_Lib}
 
 \title{MATH 267 - Homework 3}
 \author{Sele Okojie}
@@ -117,18 +115,18 @@
     \textbf{Bonus Questions:}
     
     \begin{itemize}
-            %---------------Question B1---------------%
-    	\item [(B1)] Let $\mathcal{A}$ and $\mathcal{B}$ be sets of sets.  Prove that, if $\mathcal{A} \subseteq \mathcal{B}$, then $\bigcup \mathcal{A} \subseteq \bigcup \mathcal{B}$.
-                \begin{proof}
-                    Let $\mathcal{A}$ and $\mathcal{B}$ be sets of sets and suppose that $\mathcal{A} \subseteq \mathcal{B}$. This means that: ``For all sets $x \in \mathcal{A}$, $x \in \mathcal{B}$". This further implies that: ``For all $y \in x \in \mathcal{A}$, $y \in x \in \mathcal{B}$." Now, let $\bigcup \mathcal{A} = \{ y: y \in x \ \text{for some} \ x \in \mathcal{A} \}$. However, since all values of $y$ must exist in $\mathcal{B}$, we can say that all values of $\bigcup \mathcal{A}$ must exist in $\bigcup \mathcal{B}$, or $\bigcup \mathcal{A} \subseteq \bigcup \mathcal{B}$. 
-                \end{proof}
+    
+        %---------------Question B1---------------%
+        \item [(B1)] Let $\mathcal{A}$ and $\mathcal{B}$ be sets of sets.  Prove that, if $\mathcal{A} \subseteq \mathcal{B}$, then $\bigcup \mathcal{A} \subseteq \bigcup \mathcal{B}$.
+            \begin{proof}
+                Let $\mathcal{A}$ and $\mathcal{B}$ be sets of sets and suppose that $\mathcal{A} \subseteq \mathcal{B}$. This means that: ``For all sets $x \in \mathcal{A}$, $x \in \mathcal{B}$". This further implies that: ``For all $y \in x \in \mathcal{A}$, $y \in x \in \mathcal{B}$." Now, let $\bigcup \mathcal{A} = \{ y: y \in x \ \text{for some} \ x \in \mathcal{A} \}$. However, since all values of $y$ must exist in $\mathcal{B}$, we can say that all values of $\bigcup \mathcal{A}$ must exist in $\bigcup \mathcal{B}$, or $\bigcup \mathcal{A} \subseteq \bigcup \mathcal{B}$. 
+            \end{proof}
 
-            %---------------Question B2---------------%
-    	\item [(B2)] Suppose that $\mathcal{A}$ and $\mathcal{B}$ are sets of sets.  If $\mathcal{A} \subseteq \mathcal{B}$, then can we conclude that $\bigcap \mathcal{A} \subseteq \bigcap \mathcal{B}$?
-    		Justify your answer with a proof.
-                \begin{proof}
-                    Let $\mathcal{A} = \{ \{1, 2, 3 \}, \{ 3, 4 \} \}$ and $\mathcal{B} = \{ \{1, 2, 3 \}, \{ 3, 4 \}, \{ 5, 6 \}\}$. Then, $\mathcal{A} \subseteq \mathcal{B}$. However, $\bigcap \mathcal{A} = \{ 3 \}$, but $\bigcap \mathcal{B} = \{ \text{\O} \}$. Therefore, we cannot assume that, given sets of sets $\mathcal{A}$ and $\mathcal{B}$ where $\mathcal{A} \subseteq \mathcal{B}$, $\bigcap \mathcal{A} \subseteq \bigcap \mathcal{B}$.
-                \end{proof}
+        %---------------Question B2---------------%
+        \item [(B2)] Suppose that $\mathcal{A}$ and $\mathcal{B}$ are sets of sets.  If $\mathcal{A} \subseteq \mathcal{B}$, then can we conclude that $\bigcap \mathcal{A} \subseteq \bigcap \mathcal{B}$? Justify your answer with a proof.
+            \begin{proof}
+                Let $\mathcal{A} = \{ \{1, 2, 3 \}, \{ 3, 4 \} \}$ and $\mathcal{B} = \{ \{1, 2, 3 \}, \{ 3, 4 \}, \{ 5, 6 \}\}$. Then, $\mathcal{A} \subseteq \mathcal{B}$. However, $\bigcap \mathcal{A} = \{ 3 \}$, but $\bigcap \mathcal{B} = \{ \text{\O} \}$. Therefore, we cannot assume that, given sets of sets $\mathcal{A}$ and $\mathcal{B}$ where $\mathcal{A} \subseteq \mathcal{B}$, $\bigcap \mathcal{A} \subseteq \bigcap \mathcal{B}$.
+            \end{proof}
     \end{itemize}
 
 \end{document}

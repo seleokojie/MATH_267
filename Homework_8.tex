@@ -34,15 +34,16 @@
 			f : & \ \mathbb{R} \rightarrow \mathbb{R} & f(x) = & \ |x|
 		  \end{align*}
 
-            \begin{proof}We will show that $f$ is neighter injective nor surjective.
+            \begin{proof}We will show that $f$ is neither injective nor surjective.
 
                 \begin{caseof}
-                    \case{(Not Injective)}{dfdfd
-                    
+                    \case{(Not Injective)}{
+                        Let $a_1 = 1\in\mathbb{R}$ and $a_2 = \minus 1\in\mathbb{R}$. Then, $f(a_1) = f(1) = 1$ and $f(a_2) = f(\minus 1) = 1$. So, $f(a_1) = f(a_2) = 1$. However, $a_1 \ne a_2$. \\ Thus, $f$ is not injective.
                     }\case{(Not Surjective)}{
-                    
+                        Note that the codomain of f is $\mathbb{R}$. However, f(x) is always non-negative for all $a\in\mathbb{R}$. Hence, there is no real number $a$ such that $f(a) < 0$. Thus, $f$ is not surjective.
                     }
                 \end{caseof}
+                Therefore, $f$ is neither injective nor surjective.
             \end{proof}
 
         %---------------Question 3---------------%
@@ -50,6 +51,24 @@
 		  \begin{align*}
 			f : & \ \mathbb{Z} \rightarrow \mathbb{Z} & f(n) = & \ 2n+1
 		  \end{align*}
+
+            \begin{proof}We will show that $f$ is injective but not surjective.
+
+                \begin{caseof}
+                    \case{(Injective)}{
+                        Fix arbitrary $n_1, n_2 \in\mathbb{Z}$ and assume that $f(n_1) = f(n_2)$. Then,
+                        \begin{align*}
+                            2n_1 + 1 &= 2n_2 + 1 \\
+                            2n_1 &= 2n_2 \\
+                            n_1 &= n_2.
+                        \end{align*}
+                        Thus, $f$ is injective.
+                    }\case{(Not Surjective)}{
+                        Let $b = 2\in\mathbb{Z}$. Towards a contradiction, we will assume there exists some $n\in\mathbb{Z}$ such that $f(n) = b$. Then, $2n + 1 = 2$ and $n = \frac{1}{2}$. However, $n$ is an integer, leading to a contradiction. Thus, we reject our assumption that this $n$ exists and conclude that $f$ is not surjective.
+                    }
+                \end{caseof}
+                Therefore, $f$ is injective but not surjective.
+            \end{proof}
 
         %---------------Question 4---------------%
 	\item For each function below, determine if it is bijective or not.  If it is bijective, provide the inverse function.  If it is not bijective, prove it is not:
@@ -63,8 +82,53 @@
 			l : & \ \mathbb{R} \rightarrow \mathbb{R}^2 & l(x) = & \ (\cos(x), \sin(x))
 		  \end{align*}
 
+            \begin{itemize}
+                \item $f$ is bijective. Its inverse function is: 
+                    \begin{align*}
+                        f^{\minus1} : & \ \{ 2, 4, 6, 8 \} \rightarrow \{ 1, 2, 3, 4 \} & f^{\minus1}(n) = & \ \frac{10 - n}{2}.
+                    \end{align*}
+
+                \item $g$ is not bijective because it is not surjective.
+                    \begin{proof}
+                        Let $b = 1\in\mathbb{Z}$. Towards a contradiction, we will assume there exists some $n\in\mathbb{Z}$ such that $g(n) = b$. Then, $10 - 2n = 1$ and $n = \frac{9}{2}$. However, $n$ is an integer, leading to a contradiction. Thus, we reject our assumption that this $n$ exists and conclude that $g$ is not surjective. 
+                    \end{proof}
+
+                \item $h$ is bijective. Its inverse function is:
+                    \begin{align*}
+                        h^{\minus1} : & \ \mathbb{R} \rightarrow \mathbb{R} & h^{\minus1}(x) = & \ \sqrt[3]{x - 1}.
+                    \end{align*}
+                    
+                \item $i$ is not bijective because it is not surjective.
+                    \begin{proof}
+                        Let $b = \minus1\in\mathbb{Z}$. Towards a contradiction, we will assume there exists some $n\in\mathbb{Z}$ such that $i(x) = b$. Then,
+                        \begin{align*}
+                            x^2 - 2x + 1 &= \minus 1 \\
+                            (x - 1)^2 &= \minus 1.
+                        \end{align*}
+                        Since a square is always non-negative, this is a contradiction. Thus, we reject our assumption that this $x$ exists and conclude that $i$ is not surjective. 
+                    \end{proof}
+                    
+                \item $j$ is bijective. Its inverse function is:
+                    \begin{align*}
+                        j^{\minus1} : & \ \mathbb{R} \setminus \{ 0 \} \rightarrow \mathbb{R} \setminus \{ 1 \} & j^{\minus1}(x) = & \ \frac{5}{x} + 1.
+                    \end{align*}
+
+                \item $k$ is bijective. Its inverse function is:
+                \begin{align*}
+                    k^{\minus1} : & \ \mathbb{R}^2 \rightarrow \mathbb{R}^2 & k^{\minus1}((x,y)) = & \ \left(\frac{x + y}{3}, \frac{x - 2y}{3} \right)
+                \end{align*}
+
+                \item $l$ is not bijective because it is not injective.
+                    \begin{proof}
+                        Let $a_1 = 0$ and $a_2 = 2\pi$. Then, $f(a_1) = f(0) = (1, 0)$ and $f(a_2) = f(2\pi) = (1, 0)$. So, $f(a_1) = f(a_2)$, but $a_1 \ne a_2$. Thus, $f$ is not injective.
+                    \end{proof}
+            \end{itemize}
+
         %---------------Question 5---------------%
 	\item Give an example of a bijection from $[0,1]$ to $[2,5]$.
+            \[
+                f(x) = 3x + 2.
+            \]
     \end{enumerate}
 
     \newpage
@@ -74,9 +138,47 @@
 
         %---------------Question B1---------------%
 	\item [(B1)] \textit{Generalize Question 5}. Prove that, for all real numbers $a$, $b$, $c$, and $d$, if $a < b$ and $c < d$, then there exists a bijection $f : [a,b]     \rightarrow [c,d]$.
+            \begin{proof}
+                Let $f : [a, b] \rightarrow [c, d]$ be defined as:
+                \begin{align*}
+                    f(x) = (x - a) \cdot \frac{d - c}{b - a} + c
+                \end{align*}
+                for all $x\in[a, b]$. We will show that f is a bijection, meaning that it is both injective and surjective.
+                \begin{caseof}
+                    \case{(Injective)}{
+                        Fix arbitrary $x, y \in\mathbb{Z}$ and assume that $f(x) = f(y)$. Then,
+                        \begin{align*}
+                            (x - a) \cdot \frac{d - c}{b - a} + c &= (y - a) \cdot \frac{d - c}{b - a} + c \\
+                            (x - a) \cdot \frac{d - c}{b - a} &= (y - a) \cdot \frac{d - c}{b - a}.
+                        \end{align*}
+                        Since $c < d$ and $a < b$, $(d - c) > 0$ and $(b - a) > 0$. Thus, we can divide the common fraction out and get:
+                        \begin{align*}
+                            x - a &= y - a \\
+                            x &= y.
+                        \end{align*}
+                        Thus, $f$ is injective.
+                    }\case{(Surjective)}{
+                        Fix some $n\in\mathbb{R}$ and let $m = (n - c) \cdot \frac{b - a}{d - c} + a$. Then,
+                        \begin{align*}
+                            f(m) = (m - a) \cdot \frac{d - c}{b - a} + c &= \left((n - c) \cdot \frac{b - a}{d - c} + a - a\right) \cdot \frac{d - c}{b - a} + c \\
+                            &= (n - c) \cdot \frac{b - a}{d - c} \cdot \frac{d - c}{b - a} + c.
+                        \end{align*}
+                        Since $c < d$ and $a < b$, $(d - c) > 0$ and $(b - a) > 0$. Thus, we can cancel the common terms out and get:
+                        \begin{align*}
+                            f(m) &= n - c + c \\
+                            &= n.
+                        \end{align*}
+                        Thus, $f$ is surjective.
+                    }
+                \end{caseof}
+                Since $f$ is both injective and surjective, then, for all real numbers $a$, $b$, $c$, and $d$, if $a < b$ and $c < d$, then there exists a bijection $f : [a,b]     \rightarrow [c,d]$.
+            \end{proof}
 
         %---------------Question B2---------------%
 	\item [(B2)] Find a injective function from $\mathbb{Z} \times \mathbb{Z}$ to $\mathbb{Q}$.
+            \begin{align*}
+                f(a, b) = \frac{a}{b}.
+            \end{align*}
     \end{itemize}
 
 \end{document}

@@ -2,6 +2,7 @@
 \ProvidesPackage{267_Lib}
 
 \usepackage{graphicx} % Required for inserting images
+\usepackage{changepage}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb, amsthm, amsfonts, textcomp, enumerate, cancel}
 \DeclareMathSymbol{\minus}{\mathbin}{AMSa}{"39}
@@ -11,7 +12,11 @@
 %Defining The Case Function%
 \newcounter{casenum}
 \newenvironment{caseof}{\setcounter{casenum}{1}}{\vskip.5\baselineskip}
-\newcommand{\case}[2]{\vskip.5\baselineskip\par\noindent {\bfseries Case \arabic{casenum}:} #1\\#2\addtocounter{casenum}{1}}
+\newcommand{\case}[2]{
+    \begin{adjustwidth}{1em}{1em}
+        \vskip.5\baselineskip\par\noindent {\bfseries Case \arabic{casenum}:} #1\\#2\addtocounter{casenum}{1}
+    \end{adjustwidth}
+}
 
 %Defining the subproof environment%
 \newenvironment{subproof}[1][\proofname]{%

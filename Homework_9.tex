@@ -12,6 +12,12 @@
 
         %---------------Question 1---------------%
         \item Prove that, for all sets $A$, $\mathrm{id}_A \circ \mathrm{id}_A = \mathrm{id}_A$.
+            \begin{proof}
+                Fix an arbitrary set $A$ and an arbitrary $a\in A$. Then,
+                \[
+                    \mathrm{id}_A \circ \mathrm{id}_A = (\mathrm{id}_A \circ \mathrm{id}_A)(a) = \mathrm{id}_A(\mathrm{id}_A(a)) = \mathrm{id}_A(a) = \mathrm{id}_A.
+                \]
+            \end{proof}
 
         %---------------Question 2---------------%
 	\item Let $A = \{ 1, 2, 3 \}$, $B = \{ 4, 5, 6 \}$, and $f : A \rightarrow B$ be given by
@@ -20,9 +26,9 @@
 		\]
 		Compute each of the following images and preimages:
 		\begin{align*}
-			\text{(a)} & \ \ f(\{ 1 \}) & \text{(b)} & \ \ f(\{ 1, 2 \}) \\
-			\text{(c)} & \ \ f( \emptyset ) & \text{(d)} & \ \ f^{-1}(\{ 4 \}) \\
-			\text{(e)} & \ \ f^{-1}(\{ 5 \}) & \text{(f)} & \ \ f^{-1}(\{ 4, 6 \})
+			\text{(a)} & \ \ f(\{ 1 \}) = \{ 5 \} & \text{(b)} & \ \ f(\{ 1, 2 \}) = \{ 5 \} \\
+			\text{(c)} & \ \ f( \emptyset ) = \emptyset & \text{(d)} & \ \ f^{-1}(\{ 4 \}) = \emptyset \\
+			\text{(e)} & \ \ f^{-1}(\{ 5 \}) = \{ 1, 2 \} & \text{(f)} & \ \ f^{-1}(\{ 4, 6 \}) = \{ 3 \}
 		\end{align*}
 
         %---------------Question 3---------------%
@@ -32,9 +38,9 @@
 		\]
 		Compute each of the following images and preimages:
 		\begin{align*}
-			\text{(a)} & \ \ f(\{0, 1\}) & \text{(b)} & \ \ f([0,1]) \\
-			\text{(c)} & \ \ f(\emptyset) & \text{(d)} & \ \ f^{-1}(\{ 2 \}) \\
-			\text{(e)} & \ \ f^{-1}([-2,2]) & \text{(f)} & \ \ f^{-1}(\emptyset)
+			\text{(a)} & \ \ f(\{0, 1\}) = \{ 0, \minus2 \} & \text{(b)} & \ \ f([0,1]) = [\minus2, 0] \\
+			\text{(c)} & \ \ f(\emptyset) = \emptyset & \text{(d)} & \ \ f^{-1}(\{ 2 \}) = \{ 2 \} \\
+			\text{(e)} & \ \ f^{-1}([-2,2]) = [\minus2, 2] & \text{(f)} & \ \ f^{-1}(\emptyset) = \emptyset
 		\end{align*}
 
         %---------------Question 4---------------%

@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{267_Lib}
+
+\title{MATH 267 - Homework 9}
+\author{Sele Okojie}
+\date{April 10, 2023}
+
+\begin{document}
+    \maketitle
+
+    \begin{enumerate}
+
+        %---------------Question 1---------------%
+        \item Prove that, for all sets $A$, $\mathrm{id}_A \circ \mathrm{id}_A = \mathrm{id}_A$.
+
+        %---------------Question 2---------------%
+	\item Let $A = \{ 1, 2, 3 \}$, $B = \{ 4, 5, 6 \}$, and $f : A \rightarrow B$ be given by
+		\[
+			f(1) = 5, \ f(2) = 5, \ f(3) = 6.
+		\]
+		Compute each of the following images and preimages:
+		\begin{align*}
+			\text{(a)} & \ \ f(\{ 1 \}) & \text{(b)} & \ \ f(\{ 1, 2 \}) \\
+			\text{(c)} & \ \ f( \emptyset ) & \text{(d)} & \ \ f^{-1}(\{ 4 \}) \\
+			\text{(e)} & \ \ f^{-1}(\{ 5 \}) & \text{(f)} & \ \ f^{-1}(\{ 4, 6 \})
+		\end{align*}
+
+        %---------------Question 3---------------%
+	\item Let $f : \mathbb{R} \rightarrow \mathbb{R}$ be given by
+		\[
+			f(x) = x^3 - 3x.
+		\]
+		Compute each of the following images and preimages:
+		\begin{align*}
+			\text{(a)} & \ \ f(\{0, 1\}) & \text{(b)} & \ \ f([0,1]) \\
+			\text{(c)} & \ \ f(\emptyset) & \text{(d)} & \ \ f^{-1}(\{ 2 \}) \\
+			\text{(e)} & \ \ f^{-1}([-2,2]) & \text{(f)} & \ \ f^{-1}(\emptyset)
+		\end{align*}
+
+        %---------------Question 4---------------%
+	\item Let $f : \mathbb{R} \rightarrow \mathbb{R}^2$ be given by
+		\[
+			f(x) = (\cos(x), \sin(x)).
+		\]
+		Draw each of the following images in the Euclidean plane:
+		\begin{align*}
+			\text{(a)} & \ \ f(\{ 0 \}) & \text{(b)} & \ \ f([0, \pi])
+		\end{align*}
+
+        %---------------Question 5---------------%
+	\item \emph{Proposition 10.2.1 (2)}: Prove that, for all sets $A$ and $B$, for all $C_1, C_2 \subseteq A$, and for all functions $f : A \rightarrow B$,
+		\[
+			f(C_1 \cap C_2) \subseteq f(C_1) \cap f(C_2).
+		\]
+
+        %---------------Question 6---------------%
+	\item \emph{Proposition 10.2.1 (8)}: Prove that, for all sets $A$ and $B$, for all $D \subseteq B$, and for all functions $f : A \rightarrow B$,
+		\[
+			f(f^{-1}(D)) \subseteq D.
+		\]
+    \end{enumerate}
+
+\newpage
+\textbf{Bonus Questions:}
+
+\begin{itemize}
+	\item [(B1)] \emph{What assumptions do we really need to prove Theorem 10.1.3?}  Assume that $X$ is a set and $*$ and ${}^{-1}$ are operations on $X$ such that,
+		\begin{itemize}
+			\item for all $a, b \in X$, $a * b \in X$,
+			\item for all $a \in X$, $a^{-1} \in X$,
+			\item for all $a, b, c \in X$, $a * (b * c) = (a * b) * c$,
+			\item there exists $e \in X$ such that $a * e = e * a = a$,
+			\item for all $a \in X$, $a * a^{-1} = a^{-1} * a = e$.
+		\end{itemize}
+		Prove that, for all $a, b \in X$, $(a * b)^{-1} = b^{-1} * a^{-1}$.
+	\item [(B2)] Consider the function $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ given by
+		\[
+			f((x,y)) = x + y.
+		\]
+		Compute $f^{-1}( \{ 0 \} )$ and justify your answer.
+\end{itemize}
+
+\end{document}

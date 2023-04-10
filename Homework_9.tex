@@ -27,8 +27,8 @@
 		Compute each of the following images and preimages:
 		\begin{align*}
 			\text{(a)} & \ \ f(\{ 1 \}) = \{ 5 \} & \text{(b)} & \ \ f(\{ 1, 2 \}) = \{ 5 \} \\
-			\text{(c)} & \ \ f( \emptyset ) = \emptyset & \text{(d)} & \ \ f^{-1}(\{ 4 \}) = \emptyset \\
-			\text{(e)} & \ \ f^{-1}(\{ 5 \}) = \{ 1, 2 \} & \text{(f)} & \ \ f^{-1}(\{ 4, 6 \}) = \{ 3 \}
+			\text{(c)} & \ \ f( \emptyset ) = \emptyset & \text{(d)} & \ \ f^{\minus1}(\{ 4 \}) = \emptyset \\
+			\text{(e)} & \ \ f^{\minus1}(\{ 5 \}) = \{ 1, 2 \} & \text{(f)} & \ \ f^{\minus1}(\{ 4, 6 \}) = \{ 3 \}
 		\end{align*}
 
         %---------------Question 3---------------%
@@ -39,8 +39,8 @@
 		Compute each of the following images and preimages:
 		\begin{align*}
 			\text{(a)} & \ \ f(\{0, 1\}) = \{ 0, \minus2 \} & \text{(b)} & \ \ f([0,1]) = [\minus2, 0] \\
-			\text{(c)} & \ \ f(\emptyset) = \emptyset & \text{(d)} & \ \ f^{-1}(\{ 2 \}) = \{ 2 \} \\
-			\text{(e)} & \ \ f^{-1}([-2,2]) = [\minus2, 2] & \text{(f)} & \ \ f^{-1}(\emptyset) = \emptyset
+			\text{(c)} & \ \ f(\emptyset) = \emptyset & \text{(d)} & \ \ f^{\minus1}(\{ 2 \}) = \{ 2 \} \\
+			\text{(e)} & \ \ f^{\minus1}([-2,2]) = [\minus2, 2] & \text{(f)} & \ \ f^{\minus1}(\emptyset) = \emptyset
 		\end{align*}
 
         %---------------Question 4---------------%
@@ -55,7 +55,8 @@
             \begin{tikzpicture}
                 \begin{axis}[
                     axis on top,
-                    axis lines=middle,
+                    axis lines=center,
+                    axis line style={latex-latex}, % add arrow tips
                     unit vector ratio*=1 1 1,
                     xlabel=$x$,
                     ylabel=$y$,
@@ -82,32 +83,80 @@
 		\[
 			f(C_1 \cap C_2) \subseteq f(C_1) \cap f(C_2).
 		\]
+            \begin{proof} Fix some $b\in f(C_1 \cap C_2)$. So, there exists some $a\in C_1 \cap C_2$ such that $b = f(a)$. So, $a\in C_1$ and $a\in C_2$. Then, if $a\in C_1$, then $b\in f(C_1)$. Similarly, if $a\in C_2$, then $b\in f(C_2)$. Thus, $b\in f(C_1) \cap f(C_2)$. Therefore, $f(C_1 \cap C_2) \subseteq f(C_1) \cap f(C_2)$.
+            \end{proof}
 
         %---------------Question 6---------------%
 	\item \emph{Proposition 10.2.1 (8)}: Prove that, for all sets $A$ and $B$, for all $D \subseteq B$, and for all functions $f : A \rightarrow B$,
 		\[
-			f(f^{-1}(D)) \subseteq D.
+			f(f^{\minus1}(D)) \subseteq D.
 		\]
+            \begin{proof}
+                Fix some $a\in f(f^{\minus1}(D))$. By the definition of pre-image, there exists some $b\in f^{\minus1}(D)$ such that $f(b) = a$. Since $b\in f^{\minus1}(D)$,
+                then $f(b)\in D$. Thus, $a = f(b)\in D$, proving that $f(f^{\minus1}(D)) \subseteq D$.
+            \end{proof}
     \end{enumerate}
 
 \newpage
 \textbf{Bonus Questions:}
 
 \begin{itemize}
-	\item [(B1)] \emph{What assumptions do we really need to prove Theorem 10.1.3?}  Assume that $X$ is a set and $*$ and ${}^{-1}$ are operations on $X$ such that,
+
+        %---------------Question B1---------------%
+	\item [(B1)] \emph{What assumptions do we really need to prove Theorem 10.1.3?}  Assume that $X$ is a set and $*$ and ${}^{\minus1}$ are operations on $X$ such that,
 		\begin{itemize}
 			\item for all $a, b \in X$, $a * b \in X$,
-			\item for all $a \in X$, $a^{-1} \in X$,
+			\item for all $a \in X$, $a^{\minus1} \in X$,
 			\item for all $a, b, c \in X$, $a * (b * c) = (a * b) * c$,
 			\item there exists $e \in X$ such that $a * e = e * a = a$,
-			\item for all $a \in X$, $a * a^{-1} = a^{-1} * a = e$.
+			\item for all $a \in X$, $a * a^{\minus1} = a^{\minus1} * a = e$.
 		\end{itemize}
-		Prove that, for all $a, b \in X$, $(a * b)^{-1} = b^{-1} * a^{-1}$.
+        Prove that, for all $a, b \in X$, $(a * b)^{-1} = b^{-1} * a^{-1}$.
+            \begin{proof}
+                We need to show that:
+                    \[
+                    (a * b) * (b^{\minus1} * a^{\minus1}) = e \text{ and } 
+                    (b^{\minus1} * a^{\minus1}) * (a * b) = e.
+                    \]
+                \begin{caseof}
+                    \case{($\implies$)}{Using the third property,
+                        \[
+                            (a * b) * (b^{\minus1} * a^{\minus1}) = a * (b * (b^{\minus1} * a^{\minus1})).
+                        \]
+                        Since $b * b^{\minus1} = e$, we can simplify the equation into:
+                        \[
+                            a * (e * a^{\minus1}) = a * a^{\minus1} = e.
+                        \]
+                        Therefore, $(a * b) * (b^{\minus1} * a^{\minus1}) = e$.
+                    }\case{($\impliedby$)}{Using the third property,
+                        \[
+                            (b^{\minus1} * a^{\minus1}) * (a * b) = b^{\minus1} * (a^{\minus1} * a) * b.
+                        \]
+                        Since $a * a^{\minus1} = e$, we can simplify the equation into:
+                        \[
+                            b^{\minus1} * e * b = b^{\minus1} * b = e.
+                        \]
+                        Therefore, $(b^{\minus1} * a^{\minus1}) * (a * b) = e$.
+                    }
+                \end{caseof}
+                Thus, we can conclude that $(a * b)^{-1} = b^{-1} * a^{-1}$ for all $a, b \in X$.
+            \end{proof}
+
+        %---------------Question B2---------------%
 	\item [(B2)] Consider the function $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ given by
 		\[
 			f((x,y)) = x + y.
 		\]
 		Compute $f^{-1}( \{ 0 \} )$ and justify your answer.
+            \begin{proof}
+                To compute $f^{-1}({0})$, we need to find all points in $\mathbb{R}^2$ that are mapped to 0 under $f$. To find these points, we want to solve the equation $x+y=0$ to find all points $(x,y)$ that satisfy $f((x,y))=0$.
+                This equation represents the line $y=-x$ in $\mathbb{R}^2$. So, $f^{-1}({0})$ is the set of all points on the line $y=-x$. Substituting this into the original function,
+                \[
+                    f((x, y)) = x + y = x + (\minus x) = 0.
+                \]
+
+To summarize, we have $f^{-1}({0}) = {(x,y) \in \mathbb{R}^2 : x+y = 0}$, which is the line $y=-x$.
+            \end{proof}
 \end{itemize}
 
 \end{document}

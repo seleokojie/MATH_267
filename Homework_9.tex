@@ -52,6 +52,30 @@
 		\begin{align*}
 			\text{(a)} & \ \ f(\{ 0 \}) & \text{(b)} & \ \ f([0, \pi])
 		\end{align*}
+            \begin{tikzpicture}
+                \begin{axis}[
+                    axis on top,
+                    axis lines=middle,
+                    unit vector ratio*=1 1 1,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    ymin=0, ymax=1,
+                    xmin=-1, xmax=1,
+                    xtick={-1,-0.5,0,0.5,1},
+                    ytick={-1,-0.5,0,0.5,1},
+                    ticklabel style={font=\small},
+                    enlargelimits={abs=0.2},
+                    clip=false
+                ]
+                    \addplot [only marks, red, mark=*] coordinates {(1,0)};
+                    \node [above left, red] at (axis cs:1,0) {$f(\{0\})$};
+                    
+                    \addplot [domain=0:pi, samples=100, blue, thick, name path=A] ({cos(deg(x))},{sin(deg(x))});
+                    \addplot [name path=B] coordinates {(-1,0) (1,0)};
+                    %\addplot [blue!30] fill between[of=A and B, soft clip={domain=-1:1}]; %This is how to shade under a graph for future use
+                    \node [above right, blue] at (axis cs:0.7,0.7) {$f([0,\pi])$};
+                \end{axis}
+            \end{tikzpicture}
 
         %---------------Question 5---------------%
 	\item \emph{Proposition 10.2.1 (2)}: Prove that, for all sets $A$ and $B$, for all $C_1, C_2 \subseteq A$, and for all functions $f : A \rightarrow B$,

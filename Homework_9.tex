@@ -15,7 +15,7 @@
             \begin{proof}
                 Fix an arbitrary set $A$ and an arbitrary $a\in A$. Then,
                 \[
-                    \mathrm{id}_A \circ \mathrm{id}_A = (\mathrm{id}_A \circ \mathrm{id}_A)(a) = \mathrm{id}_A(\mathrm{id}_A(a)) = \mathrm{id}_A(a) = \mathrm{id}_A.
+                    (\mathrm{id}_A \circ \mathrm{id}_A)(a) = \mathrm{id}_A(\mathrm{id}_A(a)) = \mathrm{id}_A(a).
                 \]
             \end{proof}
 
@@ -39,7 +39,7 @@
 		Compute each of the following images and preimages:
 		\begin{align*}
 			\text{(a)} & \ \ f(\{0, 1\}) = \{ 0, \minus2 \} & \text{(b)} & \ \ f([0,1]) = [\minus2, 0] \\
-			\text{(c)} & \ \ f(\emptyset) = \emptyset & \text{(d)} & \ \ f^{\minus1}(\{ 2 \}) = \{ 2 \} \\
+			\text{(c)} & \ \ f(\emptyset) = \emptyset & \text{(d)} & \ \ f^{\minus1}(\{ 2 \}) = \{ \minus1, 2 \} \\
 			\text{(e)} & \ \ f^{\minus1}([-2,2]) = [\minus2, 2] & \text{(f)} & \ \ f^{\minus1}(\emptyset) = \emptyset
 		\end{align*}
 
@@ -118,6 +118,7 @@
                     (a * b) * (b^{\minus1} * a^{\minus1}) = e \text{ and } 
                     (b^{\minus1} * a^{\minus1}) * (a * b) = e.
                     \]
+                    Note that inverses are unique.
                 \begin{caseof}
                     \case{($\implies$)}{Using the third property,
                         \[

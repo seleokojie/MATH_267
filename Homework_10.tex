@@ -15,42 +15,235 @@
     		\[
     			2 + 4 + 6 + \dots + 2n = n(n+1)
     		\]
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, notice that $2 = 1(1 + 1)$. This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}^+$ and assume that 
+                        \[
+    			             2 + 4 + 6 + \dots + 2n = n(n+1).
+    		          \]
+                    \ppar We want to prove that
+                        \[
+    			             2 + 4 + 6 + \dots + 2n + 2(n+1) = (n+1)((n+1) + 1).
+    		          \]
+                    \ppar To prove this, we add $2(n+1)$ to both sides of our assumption:
+                        \[
+    			             2 + 4 + 6 + \dots + 2n + 2(n+1) = n(n + 1) + 2(n + 1).
+    		          \]
+                    \ppar Simplifying the right-hand side, we get:
+                        \[
+    			             n(n + 1) + 2(n + 1) = (n + 1)(n + 2).
+    		          \]
+                    \ppar Therefore, 
+                    \[
+                        2 + 4 + 6 + \dots + 2n + 2(n+1) = (n+1)((n+1) + 1), 
+                    \]
+                        which is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $2 + 4 + 6 + \dots + 2n = n(n+1)$, for all positive integers $n$.
+                \end{proof}
 
             %---------------Question 2---------------%
     	\item Prove that, for all positive integers $n$,
     		\[
     			1^2 + 2^2 + 3^2 + \dots + n^2 = \frac{n(n+1)(2n+1)}{6}
     		\]
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, notice that
+                        \[
+                            1^2 = \frac{1(1 + 1)(2(1) + 1)}{6}. 
+                        \]
+                    This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}^+$ and assume that 
+                        \[
+    			             1^2 + 2^2 + 3^2 + \dots + n^2 = \frac{n(n + 1)(2n + 1)}{6}.
+    		          \]
+                    \ppar We want to prove that
+                        \[
+    			             1^2 + 2^2 + 3^2 + \dots + n^2 + (n + 1)^2= \frac{(n + 1)((n + 1) + 1)(2(n + 1) + 1)}{6}.
+    		          \]
+                    \ppar To prove this, we add $(n + 1)^2$ to both sides of our assumption:
+                        \[
+    			             1^2 + 2^2 + 3^2 + \dots + n^2 + (n + 1)^2 = \frac{n(n + 1)(2n + 1)}{6} + (n + 1)^2.
+    		          \]
+                    \ppar Simplifying the right-hand side, we get:
+                        \begin{align*}
+                            \frac{n(n + 1)(2n + 1)}{6} + (n + 1)^2 &= (n + 1)\cdot\left[\frac{n(2n + 1) + 6(n + 1)}{6}\right] \\
+                            &= (n + 1)\cdot\frac{2n^2 + 7n + 6}{6} \\
+                            &= (n + 1)\cdot\frac{(n + 2)(2n + 3)}{6} \\
+                            &= \frac{(n + 1)((n + 1) + 1)(2(n + 1) + 1)}{6}.
+                        \end{align*}
+                    \ppar Therefore, 
+                        \[
+                            1^2 + 2^2 + 3^2 + \dots + n^2 + (n + 1)^2= \frac{(n + 1)((n + 1) + 1)(2(n + 1) + 1)}{6}.
+                        \]
+                        which is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $1^2 + 2^2 + 3^2 + \dots + n^2 = \frac{n(n+1)(2n+1)}{6}$, for all positive integers $n$.
+                \end{proof}
 
             %---------------Question 3---------------%
     	\item Prove that, for all positive integers $n$,
     		\[
     			1^2 + 3^2 + 5^2 + \dots + (2n-1)^2 = \frac{4n^3-n}{3}
     		\]
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, notice that 
+                        \[
+                            1^2 = \frac{4(1)^3 - 1}{3} = 1.
+                        \]
+                    This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}^+$ and assume that 
+                        \[
+    			             1^2 + 3^2 + 5^2 + \dots + (2n - 1)^2 = \frac{4n^3 - n}{3}.
+    		          \]
+                    \ppar We want to prove that
+                        \[
+    			             1^2 + 3^2 + 5^2 + \dots + (2n - 1)^2 + (2(n + 1) - 1)^2 = \frac{4(n + 1)^3 - (n + 1)}{3}.
+    		          \]
+                    \ppar To prove this, we add $(2n + 1)^2$ to both sides of our assumption:
+                        \[
+    			             1^2 + 3^2 + 5^2 + \dots + (2n - 1)^2 + (2n + 1)^2 = \frac{4n^3 - n}{3} + (2n + 1)^2.
+    		          \]
+                    \ppar Simplifying the right-hand side, we get:
+                        \begin{align*}
+    			        \frac{4n^3 - n}{3} + (2n + 1)^2 &= \frac{4n^3 - n + 3(4n^2 + 4n + 1))}{3} \\
+                            &= \frac{4n^3 + 12n^2 + 11n + 3}{3} \\
+                            &= \frac{4(n + 1)^3 - (n + 1)}{3} \\
+    		          \end{align*}
+                    \ppar Therefore, 
+                    \[
+                        1^2 + 3^2 + 5^2 + \dots + (2n - 1)^2 + (2(n + 1) - 1)^2 = \frac{4(n + 1)^3 - (n + 1)}{3}.
+                    \]
+                        which is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $1^2 + 3^2 + 5^2 + \dots + (2n-1)^2 = \frac{4n^3-n}{3}$, for all positive integers $n$.
+                \end{proof}
 
             %---------------Question 4---------------%
     	\item Prove that, for all positive integers $n$, $n^3 - n$ is divisible by $3$.
+                \begin{proof}
+                    We will prove this by strong mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, notice that $1^3 - 1 = 0$, which is divisible by $3$. This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $k, n\in\mathbb{Z}^+$ where $n \le k$ and assume that
+                        \[
+    			             n^3 - n\text{ is divisible by }3.
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             (k + 1)^3 - (k + 1)\text{ is also divisible by }3.
+    		          \]
+                    \ppar Expanding $(k + 1)^3 - (k + 1)$, 
+                        \begin{align*}
+                            (k + 1)^3 - (k + 1) &= (k^3 + 3k^2 + 3k + 1) - (k + 1) \\ 
+                            &= (k^3 - k) + (3k^2 + 3k) \\
+                            &= (k^3 - k) + 3(k^2 + k)
+                        \end{align*}
+                    \ppar Then, by our assumption, since $k^3 - k$ is divisible by $3$ and $(k^2 + k)\in\mathbb{Z}$, then it follows that $3\cdot(k^2 + k)$ is divisible by $3$. Therefore, the entire expression $(k + 1)^3 - (k + 1)$ is divisible by $3$. This is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $n^3 - n$ is divisible by $3$, for all positive integers $n$.
+                \end{proof}
 
             %---------------Question 5---------------%
     	\item Prove that, for all positive integers $n$, $4^n - 1$ is divisible by $3$.
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, notice that $4^1 - 1 = 3$, which is divisible by $3$. This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}^+$ and assume that
+                        \[
+    			             4^n - 1\text{ is divisible by }3.
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             4^{n + 1} - 1\text{ is also divisible by }3.
+    		          \]
+                    \ppar Expanding $4^{n + 1} - 1$, 
+                        \begin{align*}
+                            4^{n + 1} - 1 &= (4 \cdot 4^n) - 1 \\ 
+                            &= (3 \cdot 4^n) + (4^n - 1).
+                        \end{align*}
+                    \ppar Then, by our assumption, we know that $4^n - 1$ is divisible by $3$. Furthermore, notice that $3 \cdot 4^n$ is divisible by $3$. Therefore, it follows that the entire expression $(4^{n + 1} - 1)$ is divisible by $3$. This is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $4^n - 1$ is divisible by $3$, for all positive integers $n$.
+                \end{proof}
 
             %---------------Question 6---------------%
-    	\item Prove that, for all integers $n$, if $n \ge 4$, then
-    		\[
-    			3^n \ge n^3
-    		\]
+    	\item Prove that, for all integers $n$, if $n \ge 4$, then $3^n \ge n^3$.
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 4$, $3^n = 3^4 = 81$ and $n^3 = 4^3 = 64$. Since $81 \ge 64$, the expression holds. This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}$ where $n \ge 4$ and assume that
+                        \[
+    			             3^n \ge n^3.
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             3^{n + 1} \ge (n + 1)^3.
+    		          \]
+                    \ppar Rewriting $3^{n + 1}$, 
+                        \begin{align*}
+                            3^{n + 1} &= 3 \cdot 3^n \\ 
+                            &\ge 3 \cdot n^3 \\
+                            &= n^3 + 2n^3 \\
+                            &> n^3 + 3n^2 + 3n + 1 \\
+                            &= (n + 1)^3.
+                        \end{align*}
+                    \ppar Thus, $3^{n + 1} \ge (n + 1)^3$, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $3^n \ge n^3$, for all integers $n \ge 4$.
+                \end{proof}
 
             %---------------Question 7---------------%
-    	\item Prove that, for all integers $n$, if $n \ge 4$, then
-    		\[
-    			2^n \le n!
-    		\]
+    	\item Prove that, for all integers $n$, if $n \ge 4$, then $2^n \le n!$.
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 4$, $2^n = 2^4 = 16$ and $n! = 4! = 24$. Since $16 \le 24$, the expression holds. This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}$ where $n \ge 4$ and assume that
+                        \[
+    			             2^n \le n!.
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             2^{n + 1} \le (n + 1)!
+    		          \]
+                    \ppar Rewriting $2^{n + 1}$, 
+                        \begin{align*}
+                            2^{n + 1} &= 2 \cdot 2^n \\ 
+                            &\le 2n! \\
+                            &\le n + 1)\cdot n! \\
+                            &= (n + 1)!.
+                        \end{align*}
+                    \ppar Thus, $2^{n + 1} \le (n + 1)!$, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $2^n \le n!$, for all integers $n \ge 4$.
+                \end{proof}
 
             %---------------Question 8---------------%
     	\item Suppose that $a_1 = 1$, $a_2 = 3$, and $a_{n+2} = 2a_{n+1} - a_n$ for all integers $n$ with $n \ge 3$.  Prove that, for all positive integers $n$,
     		\[
     			a_n = 2n - 1.
     		\]
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, $a_1 = 1 = 2(1) - 1$. This concludes the base case.
+                    \ppar (\textbf{Base Case}): For $n = 2$, $a_2 = 3 = 2(2) - 1$. This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}$ where $n \ge 2$ and assume that 
+                        \[
+    			             a_n = 2n - 1.
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             a_{n + 1} = 2(n + 1) - 1.
+    		          \]
+                    \ppar Using the recursive definition of $a_n$ given to us, we have
+                        \[
+    			             a_{n + 1 + 1} = 2a_{n + 1} - a_{n + 1 - 1}.
+    		          \]
+                    \ppar Simplifying, we get
+                        \begin{align*}
+                            a_{n + 2} &= 2(2n - 1) - (2n - 3) \\ 
+                            &= 4n - 2 - 2n + 3 \\
+                            &= 2n + 1 \\
+                            &= 2(n + 1) - 1.
+                        \end{align*}
+                    \ppar Thus, $a_{n + 1} = 2(n + 1) - 1$, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $a_n = 2n - 1$, for all positive integers $n$.
+                \end{proof}
     \end{enumerate}
     
     \newpage
@@ -63,6 +256,33 @@
     		\[
     			\left( 1 + x \right)^n \ge 1 + nx
     		\]
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 1$, $(1 + x)^1 = 1 + x$. Since $1 + x \ge 1 + x$, this concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}^+$ and assume that 
+                        \[
+    			             \left( 1 + x \right)^n \ge 1 + nx
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             \left( 1 + x \right)^{n + 1} \ge 1 + (n + 1)\cdot x.
+    		          \]
+                    \ppar Expanding $\left( 1 + x \right)^{n + 1}$
+                        \[
+    			             \left( 1 + x \right)^{n + 1} = (1 + x)^n \cdot (1 + x)
+    		          \]
+                    \ppar Substituting our assumption that $\left( 1 + x \right)^n \ge 1 + nx$ into the above equation,
+                        \begin{align*}
+                            \left( 1 + x \right)^{n + 1} &\ge (1 + nx)\cdot (1 + x) \\ 
+                            \left( 1 + x \right)^{n + 1} &\ge 1 + (n + 1)\cdot x + nx^2.
+                        \end{align*}
+                    \ppar Since $x\in\mathbb{R} > 0$ and $n\in\mathbb{Z}^+$, we have $nx^2 > 0$. This allows us to remove $nx^2$ from the right-hand side of the inequality and obtain
+                        \[
+    			        \left( 1 + x \right)^{n + 1} \ge 1 + (n + 1)\cdot x.
+    		          \]
+                    which is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $\left( 1 + x \right)^n \ge 1 + nx$, for all real numbers $x$ and all positive integers $n$.
+                \end{proof}
 
             %---------------Question B2---------------%
     	\item [(B2)] Define the \emph{Fibonacci Sequence} as follows:
@@ -73,6 +293,46 @@
     		\[
     			F_n = \frac{ \left( 1+\sqrt{5} \right)^n - \left( 1-\sqrt{5} \right)^n }{ 2^n \sqrt{5} }.
     		\]
+                \begin{proof}
+                    We will prove this by mathematical induction on n.
+                    \ppar (\textbf{Base Case}): For $n = 0$, $F_0 = 0$ and 
+                        \[
+                            \frac{(1 + \sqrt{5})^{0} - (1 - \sqrt{5})^{0}}{2^0 \cdot \sqrt{5}} = 0. 
+                        \]
+                    This concludes the base case.
+                    \ppar (\textbf{Base Case}): For $n = 1$, $F_1 = 1$ and 
+                        \[
+                            \frac{(1 + \sqrt{5})^{1} - (1 - \sqrt{5})^{1} }{2^1 \cdot \sqrt{5}} = 1. 
+                        \]
+                    This concludes the base case.
+                    \ppar (\textbf{Inductive Step}): Fix $n\in\mathbb{Z}$ where $n \ge 1$ and assume that 
+                        \[
+    			             F_n = \frac{ \left( 1+\sqrt{5} \right)^n - \left( 1-\sqrt{5} \right)^n }{ 2^n \sqrt{5} }.
+    		          \]
+                    \ppar We want to show that
+                        \[
+    			             F_{n + 1} = \frac{ \left( 1+\sqrt{5} \right)^{n + 1} - \left( 1-\sqrt{5} \right)^{n + 1} }{ 2^{n + 1} \sqrt{5} }.
+    		          \]
+                    \ppar Using the recursive definition of $a_n$ given to us, we have
+                        \[
+    			             F_{n+1} = F_n + F_{n - 1}.
+    		          \]
+                    \ppar Substituting $F_n$ into the equation, 
+                        \[
+    			             F_{n + 1} = \frac{ \left( 1+\sqrt{5} \right)^n - \left( 1-\sqrt{5} \right)^n }{ 2^n \sqrt{5} } + \frac{ \left( 1+\sqrt{5} \right)^{n - 1} - \left( 1-\sqrt{5} \right)^{n - 1} }{ 2^{n - 1} \sqrt{5} }.
+    		          \]
+                    \ppar Multiplying the first term by $\frac{1 - \sqrt{5}}{1 - \sqrt{5}}$ and the second term by $\frac{1 + \sqrt{5}}{1 + \sqrt{5}}$, we get
+                        \begin{align*}
+                             F_{n + 1} = \frac{ (1 - \sqrt{5})\left( 1+\sqrt{5} \right)^n - (1 - \sqrt{5})\left( 1-\sqrt{5} \right)^n }{ 2^n \sqrt{5} \cdot (1 - 5)} + \frac{ (1 + \sqrt{5})\left( 1+\sqrt{5} \right)^{n - 1} - (1 + \sqrt{5})\left( 1-\sqrt{5} \right)^{n - 1} }{ 2^{n - 1} \sqrt{5} \cdot (1 - 5)}.
+                        \end{align*}
+                    Simplifying, 
+                        \begin{align*}
+                            F_{n + 1} &= \frac{(1 + \sqrt{5})^n \cdot (1 - \sqrt{5}) + (1 + \sqrt{5})^{n-1} \cdot (1 + \sqrt{5}) - (1 - \sqrt{5})^n \cdot (1 + \sqrt{5}) - (1 - \sqrt{5})^{n-1} \cdot (1 - \sqrt{5})}{2^n \sqrt{5} \cdot (1 - 5)} \\
+                            &= \frac{(1 + \sqrt{5})^{n+1} - (1 - \sqrt{5})^{n+1}}{2^{n+1} \sqrt{5}}
+                        \end{align*}
+                        which is what we wanted to prove, concluding the inductive step.
+                    \\\\ Thus, by mathematical induction, $F_n = \frac{ \left( 1+\sqrt{5} \right)^n - \left( 1-\sqrt{5} \right)^n }{ 2^n \sqrt{5} }.$, for all $n\in\mathbb{N}$.
+                \end{proof}
     \end{itemize}
 
 \end{document}

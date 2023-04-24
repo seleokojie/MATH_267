@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{267_Lib}
+
+\title{MATH 267 - Homework 11}
+\author{Sele Okojie}
+\date{April 24, 2023}
+
+\begin{document}
+    \maketitle
+    
+    \begin{enumerate}
+
+            %---------------Question 1---------------%
+    	\item Does $0\ |\ 0$?  Justify your answer.
+
+            %---------------Question 2---------------%
+    	\item Prove that, for all integers $a$ and $n$,
+    		\[
+    			n\ |\ a \text{ if and only if } a \equiv 0\ (\mathrm{mod}\ n).
+    		\]
+
+            %---------------Question 3---------------%
+    	\item Prove that, for all integers $a$, $b$, $c$, $d$, $n$, and $m$,
+    		\[
+    			\text{if } a\ |\ b \text{ and } a\ |\ c, \text{ then } a\ |\ (bn + cm).
+    		\]
+
+            %---------------Question 4---------------%
+    	\item Prove that, for all integers $a$,
+    		\[
+    			3\ |\ a \text{ if and only if } 3\ |\ a^2.
+    		\]
+
+            %---------------Question 5---------------%
+    	\item \emph{Prove Proposition 2.1.7.} Use the Quotient-Remainder Theorem to prove that, for all integers $a$, $2\not|\ a$ if and only if there exists an integer $c$ such that $a = 2c + 1$.
+
+            %---------------Question 6---------------%
+    	\item What is $\mathrm{gcd}(0,5)$?  Justify your answer.
+
+            %---------------Question 7---------------%
+    	\item Consider the numbers $1234$ and $4567$.
+    		\begin{enumerate}
+    			\item Use the Euclidean Algorithm to compute $\gcd(1234, 4567)$.
+    			\item Find integers $n$ and $m$ such that
+    				\[
+    					1234n + 4567m = 1.
+    				\]
+    			\item Find an integer $a$ such that
+    				\[
+    					1234a \equiv 5 \ (\mathrm{mod}\ 4567).
+    				\]
+    		\end{enumerate}
+
+            %---------------Question 8---------------%
+    	\item Use Modular Arithmetic to answer each of the following questions:
+    		\begin{enumerate}
+    			\item What day of the week is it $8^{1729}$ days after a Monday?
+    			\item What day of the week is it $6^{5678}$ days after a Friday?
+    			\item What time is it $23^{9999}$ hours after 6pm?
+    			\item What time is it $5^{4500}$ hours after 3am?
+    			\item What time is it $5^{10001}$ hours after 4pm?
+    		\end{enumerate}
+    \end{enumerate}
+    
+    \newpage
+    \textbf{Bonus Questions:}
+    
+    \begin{itemize}
+
+            %---------------Question B1---------------%
+    	\item [(B1)] \emph{Euclid's Lemma.} Prove that, for all prime numbers $p$, for all integers $a$ and $b$,
+    		\[
+    			\text{if } p\ |\ ab, \text{ then } p\ |\ a \text{ or } p\ |\ b.
+    		\]
+    		(\textbf{Hint:} if $p$ is prime and $p\not|\ a$, then $\gcd(p,a) = 1$.)
+
+            %---------------Question B2---------------%
+    	\item [(B2)] Use (B1) to prove that, for all prime numbers $p$, $\sqrt{p}$ is irrational.
+    \end{itemize}
+    
+\end{document}

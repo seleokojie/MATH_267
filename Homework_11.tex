@@ -77,7 +77,15 @@
                                         If $p\ | \ a$, then we conclude. 
 
                                     }\case{($p\nmid|\ a$)}{
-                                        Since $p$ is prime, the only positive divisors of $p$ are $1$ and $p$. However, $p$ does not divide $a$, so $\gcd(p, a) = 1$. Thus, $p$ and $a$ are relatively prime. Finally, since $p \mid a\cdot b$, then $p \mid b$. 
+                                        Since $p$ is prime, the only positive divisors of $p$ are $1$ and $p$. However, $p$ does not divide $a$, so $\gcd(p, a) = 1$. This means that there exists $x, y\in\mathbb{Z}$ such that $px + ay = 1$. Multiplying both sides by $b$, we get:
+                                        \[
+                                            pxb + ayb = b
+                                        \]
+                                        Then, since $p \mid pxb$ and $p \mid ayb$ (because $p \mid a\cdot b$ and $p \mid p\cdot a$), 
+                                        \[
+                                            p \mid (pxb + ayb)
+                                        \]
+                                        Then, since $pxb + ayb = b$ by the previous equation, $p \mid b$. 
                                     }
                                 \end{caseof}
                             \end{subproof}
@@ -236,7 +244,7 @@
                     \]
                     Since $p$ is a prime number, and $p \mid pb^2$, Euclid's lemma tells us that either $p \mid p$ or $p \mid b^2$. Since $p$ is prime, we know that $p$ does not divide $b$. Therefore, $p$ must divide $a^2$.\\
 
-                    Since $p$ is prime, it follows from the Fundamental Theorem of Arithmetic that there exist integers $k$ and $c$ such that $a^2 = p^kc$. Since $p$ is prime, it cannot divide $c$ (otherwise, $a^2$ would have a larger power of $p$ in its prime factorization). Therefore, we have $p \mid a^2$ but $p\nmid a$, which contradicts Euclid's lemma.
+                    Since $p$ is prime, it follows from the Fundamental Theorem of Arithmetic that there exist integers $k$ and $c$ such that $a^2 = p^kc$. Since $p$ is prime, it cannot divide $c$ (otherwise, $a^2$ would have a larger power of $p$ in its prime factorization). Therefore, we have $p \mid a^2$ and, since $p$ is prime, $p \mid a$. This means that $a$ and $p$ share a common factor and, since $p$ is prime, it cannot have any other factors besides $1$ and $p$. Therefore, $a$ and $p$ are not coprime. However, this contradicts our assumption that $a$ and $b$ are coprime.
 
                     Thus, our assumption that $\sqrt{p}$ is rational must be false, and so we conclude that $\sqrt{p}$ is irrational for all prime numbers $p$.
                 \end{proof}

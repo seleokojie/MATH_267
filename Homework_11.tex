@@ -11,80 +11,80 @@
     \begin{enumerate}
 
             %---------------Question 1---------------%
-    	\item Does $0\ |\ 0$?  Justify your answer.
+    	\item Does $0 \mid 0$?  Justify your answer.
                 \begin{proof}
-                    Since there exists an integer $k$ such that $0 = k \cdot 0$, then $0\ |\ 0$.
+                    Since there exists an integer $k$ such that $0 = k \cdot 0$, then $0 \mid 0$.
                 \end{proof}
 
             %---------------Question 2---------------%
     	\item Prove that, for all integers $a$ and $n$,
     		\[
-    			n\ |\ a \text{ if and only if } a \equiv 0\ (\mathrm{mod}\ n).
+    			n \mid a \text{ if and only if } a \equiv 0\ (\mathrm{mod}\ n).
     		\]
                 \begin{proof}
                     Let $a, n\in\mathbb{Z}$. We want to prove that 
                     \begin{align*}
-                        \text{i. }   & \text{If $n\ |\ a$, then $a \equiv 0\ (\mathrm{mod}\ n)$ and}  \\
-                        \text{ii. }  & \text{If $a \equiv 0\ (\mathrm{mod}\ n)$, then $n\ |\ a$.}
+                        \text{i. }   & \text{If $n \mid a$, then $a \equiv 0\ (\mathrm{mod}\ n)$ and}  \\
+                        \text{ii. }  & \text{If $a \equiv 0\ (\mathrm{mod}\ n)$, then $n \mid a$.}
                     \end{align*}
                                 
                     \begin{enumerate}[i.]
-                        \item Assume that $n\ |\ a$. Then, there exists some $k\in\mathbb{Z}$ such that $a = n\cdot k$. Subtracting $0$ from both sides, we get $a - 0 = n\cdot k$. Since $n\cdot k\in\mathbb{Z}$, this means that $n\ |\ (a - 0)$, which means that $a \equiv 0\ (\mathrm{mod}\  n)$. \\
+                        \item Assume that $n \mid a$. Then, there exists some $k\in\mathbb{Z}$ such that $a = n\cdot k$. Subtracting $0$ from both sides, we get $a - 0 = n\cdot k$. Since $n\cdot k\in\mathbb{Z}$, this means that $n \mid (a - 0)$, which means that $a \equiv 0\ (\mathrm{mod}\  n)$. \\
                                     
-                        \item Assume that $a \equiv 0\ (\mathrm{mod}\ n)$. Then, by the definition of congruence, $n\ |\ (a - 0)$. Then, since $(a - 0) = a$, we can say that $n\ |\ a$.
+                        \item Assume that $a \equiv 0\ (\mathrm{mod}\ n)$. Then, by the definition of congruence, $n \mid (a - 0)$. Then, since $(a - 0) = a$, we can say that $n \mid a$.
                     \end{enumerate}
-                    Since we have proved both statements, we can conclude that $n\ |\ a$ iff $a \equiv 0\ (\mathrm{mod}\ n)$, for all integers $a, n$.
+                    Since we have proved both statements, we can conclude that $n \mid a$ iff $a \equiv 0\ (\mathrm{mod}\ n)$, for all integers $a, n$.
                 \end{proof}
 
             %---------------Question 3---------------%
     	\item Prove that, for all integers $a$, $b$, $c$, $d$, $n$, and $m$,
     		\[
-    			\text{if } a\ |\ b \text{ and } a\ |\ c, \text{ then } a\ |\ (bn + cm).
+    			\text{if } a \mid b \text{ and } a \mid c, \text{ then } a \mid (bn + cm).
     		\]
                 \begin{proof}
-                    Let $a, b, c, d, n\in\mathbb{Z}$ and assume that $a\ |\ b$ and $a\ |\ c$. Then, since $a\ |\ b$, there exists some $k_1\in\mathbb{Z}$ such that $b = a\cdot k_1$. Similarly, since $a\ |\ c$, there exists some $k_2\in\mathbb{Z}$ such that $c = a\cdot k_2$.
+                    Let $a, b, c, d, n\in\mathbb{Z}$ and assume that $a \mid b$ and $a \mid c$. Then, since $a \mid b$, there exists some $k_1\in\mathbb{Z}$ such that $b = a\cdot k_1$. Similarly, since $a \mid c$, there exists some $k_2\in\mathbb{Z}$ such that $c = a\cdot k_2$.
                     \ppar Then, using these new expressions for $b$ and $c$,
                         \begin{align*}
                             bn + cm &= (a\cdot k_1)\cdot n + (a \cdot k_2)\cdot m \\
                             &= a \cdot (k_1\cdot n + k_2 \cdot m).
                         \end{align*}
-                    \ppar Thus, since $k_1, k_2, n, m\in\mathbb{Z}$, then $(k_1\cdot n + k_2 \cdot m)\in\mathbb{Z}$. This means that $a\ |\ (bn + cm)$. Thus, for all integers $a$, $b$, $c$, $d$, $n$, and $m$, if $a\ |\ b$ and $a\ |\ c$, then $a\ |\ (bn + cm)$.
+                    \ppar Thus, since $k_1, k_2, n, m\in\mathbb{Z}$, then $(k_1\cdot n + k_2 \cdot m)\in\mathbb{Z}$. This means that $a \mid (bn + cm)$. Thus, for all integers $a$, $b$, $c$, $d$, $n$, and $m$, if $a \mid b$ and $a \mid c$, then $a \mid (bn + cm)$.
                 \end{proof}
 
             %---------------Question 4---------------%
     	\item Prove that, for all integers $a$,
     		\[
-    			3\ |\ a \text{ if and only if } 3\ |\ a^2.
+    			3 \mid a \text{ if and only if } 3 \mid a^2.
     		\]
                 \begin{proof}
                     Let $a\in\mathbb{Z}$. We want to prove that 
                     \begin{align*}
-                        \text{i. }   & \text{If $3\ |\ a$, then $3\ |\ a^2$ and}  \\
-                        \text{ii. }  & \text{If $3\ |\ a^2$, then $3\ |\ a$.}
+                        \text{i. }   & \text{If $3 \mid a$, then $3 \mid a^2$ and}  \\
+                        \text{ii. }  & \text{If $3 \mid a^2$, then $3 \mid a$.}
                     \end{align*}
                                 
                     \begin{enumerate}[i.]
-                        \item Assume that $3\ |\ a$. Then, by the definition of divisibility, there exists some $k\in\mathbb{Z}$ such that $a = 3\cdot k$. Squaring both sides of the equation,
+                        \item Assume that $3 \mid a$. Then, by the definition of divisibility, there exists some $k\in\mathbb{Z}$ such that $a = 3\cdot k$. Squaring both sides of the equation,
                             \[
                                 a^2 = (3\cdot k)^2 = 9\cdot k^2.
                             \]
-                        \ppar Since $9\cdot k^2 = 3\cdot(3\cdot k^2$, there exists an integer $m = 3\cdot k^2$ such that $a^2 = 3\cdot m$. This implies that $3\ |\ a^2$. \\
-                        \item Assume that $3\ |\ a^2$. Then, by the definition of divisibility, there exists some $k\in\mathbb{Z}$ such that $a^2 = 3\cdot k$.
+                        \ppar Since $9\cdot k^2 = 3\cdot(3\cdot k^2)$, there exists an integer $m = 3\cdot k^2$ such that $a^2 = 3\cdot m$. This implies that $3 \mid a^2$. \\
+                        \item Assume that $3 \mid a^2$. Then, by the definition of divisibility, there exists some $k\in\mathbb{Z}$ such that $a^2 = 3\cdot k$.
                             \begin{subproof}[Subproof (Euclid's Lemma)]
-                                Let $a,b\in\mathbb{Z}$. Furthermore, let $p$ be a prime number and assume that $p\ |\ a\cdot b$. We want to prove that either $p\ | \ a$ or $p\ | \ b$.
+                                Let $a,b\in\mathbb{Z}$. Furthermore, let $p$ be a prime number and assume that $p \mid a\cdot b$. We want to prove that either $p\ | \ a$ or $p\ | \ b$.
                                 \begin{caseof}
                                     \case{($p\ | \ a$)}{
                                         If $p\ | \ a$, then we conclude. 
 
                                     }\case{($p\nmid|\ a$)}{
-                                        Since $p$ is prime, the only positive divisors of $p$ are $1$ and $p$. However, $p$ does not divide $a$, so $\gcd(p, a) = 1$. Thus, $p$ and $a$ are relatively prime. Finally, since $p\ |\ a\cdot b$, then $p\ |\ b$. 
+                                        Since $p$ is prime, the only positive divisors of $p$ are $1$ and $p$. However, $p$ does not divide $a$, so $\gcd(p, a) = 1$. Thus, $p$ and $a$ are relatively prime. Finally, since $p \mid a\cdot b$, then $p \mid b$. 
                                     }
                                 \end{caseof}
                             \end{subproof}
-                        Then, since $3$ is prime and $3\ |\ a^2 = a\cdot a$, either $3\ |\ a$ or $3\ |\ a$, by Euclid's Lemma. Thus, $3\ |\ a$, since these conditions are equivalent. 
+                        Then, since $3$ is prime and $3 \mid a^2 = a\cdot a$, either $3 \mid a$ or $3 \mid a$, by Euclid's Lemma. Thus, $3 \mid a$, since these conditions are equivalent. 
                     
                     \end{enumerate}
-                    Since we have proved both statements, we can conclude that $3\ |\ a$ iff $3\ |\ a^2$, for all integers $a$.
+                    Since we have proved both statements, we can conclude that $3 \mid a$ iff $3 \mid a^2$, for all integers $a$.
                 \end{proof}
 
             %---------------Question 5---------------%
@@ -214,7 +214,7 @@
             %---------------Question B1---------------%
     	\item [(B1)] \emph{Euclid's Lemma.} Prove that, for all prime numbers $p$, for all integers $a$ and $b$,
     		\[
-    			\text{if } p\ |\ ab, \text{ then } p\ |\ a \text{ or } p\ |\ b.
+    			\text{if } p \mid ab, \text{ then } p \mid a \text{ or } p \mid b.
     		\]
     		(\textbf{Hint:} if $p$ is prime and $p\nmid|\ a$, then $\gcd(p,a) = 1$.)
                 \ppar Solved in Question 4.
@@ -222,7 +222,7 @@
             %---------------Question B2---------------%
     	\item [(B2)] Use (B1) to prove that, for all prime numbers $p$, $\sqrt{p}$ is irrational.
                 \begin{proof}
-                    To prove that $\sqrt{p}$ is irrational for all prime numbers $p$, we will use Euclid's lemma, which states that for all prime numbers $p$, if $p\ |\ ab$, then $p\ |\ a$ or $p\ |\ b$.
+                    To prove that $\sqrt{p}$ is irrational for all prime numbers $p$, we will use Euclid's lemma, which states that for all prime numbers $p$, if $p \mid ab$, then $p \mid a$ or $p \mid b$.
 
                     Towards a contradiction, suppose that $\sqrt{p}$ is rational. Then, there exist $a, b\in\mathbb{Z}$ such that $\sqrt{p}=\frac{a}{b}$, where $b\neq0$. We may assume that $a$ and $b$ have no common factors, since we can always divide them by their greatest common divisor without changing the value of the fraction.
 
@@ -234,11 +234,11 @@
                     \[
                         pb^2 = a^2.
                     \]
-                    Since $p$ is a prime number, and $p\ |\ pb^2$, Euclid's lemma tells us that either $p\ |\ p$ or $p\ |\ b^2$. Since $p$ is prime, we know that $p$ does not divide $b$. Therefore, $p$ must divide $a^2$.\\
+                    Since $p$ is a prime number, and $p \mid pb^2$, Euclid's lemma tells us that either $p \mid p$ or $p \mid b^2$. Since $p$ is prime, we know that $p$ does not divide $b$. Therefore, $p$ must divide $a^2$.\\
 
-                    Since $p$ is prime, it follows from the Fundamental Theorem of Arithmetic that there exist integers $k$ and $c$ such that $a^2 = p^kc$. Since $p$ is prime, it cannot divide $c$ (otherwise, $a^2$ would have a larger power of $p$ in its prime factorization). Therefore, we have $p\ |\ a^2$ but $p\nmid a$, which contradicts Euclid's lemma.
+                    Since $p$ is prime, it follows from the Fundamental Theorem of Arithmetic that there exist integers $k$ and $c$ such that $a^2 = p^kc$. Since $p$ is prime, it cannot divide $c$ (otherwise, $a^2$ would have a larger power of $p$ in its prime factorization). Therefore, we have $p \mid a^2$ but $p\nmid a$, which contradicts Euclid's lemma.
 
-Thus, our assumption that $\sqrt{p}$ is rational must be false, and so we conclude that $\sqrt{p}$ is irrational for all prime numbers $p$.
+                    Thus, our assumption that $\sqrt{p}$ is rational must be false, and so we conclude that $\sqrt{p}$ is irrational for all prime numbers $p$.
                 \end{proof}
     \end{itemize}
     
